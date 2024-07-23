@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div>
+            <img src="../images/employee.png" alt="" width="75px">
+            <b style="font-size: 35px; color: rgb(191, 25, 25);">Employee Registration Form</b>
+        </div>
+        <div>
+            <table>
+                <td></td>
+                <td>
+                    <input type="radio" name="m" id="mr" checked>Mr.
+                    <input type="radio" name="m" id="mrs">Mrs.
+                    <input type="radio" name="m" id="ms">Ms.
+                </td>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text" name="first_name" id="fname" placeholder="First name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" name="last_name" id="lname" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail1">Mail Address1</label></td>
+                    <td><input type="text" name="mail_1" id="mail1"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail2">Mail Address2</label></td>
+                    <td><input type="text" name="mail_2" id="mail2"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input type="text" name="n_city" id="city"></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State</label></td>
+                    <td>
+                        <select name="list_state" id="state">
+                            <option value="">Gujarat </option>
+                            <option value="">Rajsthan</option>
+                            <option value="">Maharastra</option>
+                            <option value="">M.P.</option>
+                            <option value="">karnatak</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="zip"></label>Zip</td>
+                    <td><input type="text" name="pincode" id="zip"></td>
+                </tr>
+                <tr>
+                    <td><label for="photo">Upload Photo</label></td>
+                    <td><input type="file" name="upload_photo" id="photo" accept=".jpg,.jpeg"></td>
+                </tr>
+                <tr>
+                    <td><label for="emailid">E-Mail</label></td>
+                    <td><input type="email" name="email_id" id="emailid"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile</label></td>
+                    <td><input type="text" name="mobileno" id="mobile" minlength="13" maxlength="13" placeholder="+91">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="language">Languages known</label></td>
+                    <td><input type="checkbox" name="gujarati" id="l1" checked>
+                        <label for="l1">Gujarati</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="hindi" id="l2" checked>
+                        <label for="l2">Hindi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="english" id="l3" checked>
+                        <label for="l3">English</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="marathi" id="l4">
+                        <label for="l4">Marathi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="info">Additional Information</label></td>
+                    <td><textarea name="add_info" id="info" rows="3" cols="25" placeholder="optional"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
