@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* --------------border with image--------------------- */
+        .p1 {
+            margin: 10px;
+            padding: 5px;
+            width: 200px;
+            border: 5px solid green;
+            border-image-source: url(../images/border.png);
+            border-width: 100px;
+            border-image-slice: 136;
+        }
+
+        .p2 {
+            background: white;
+            padding: 11px 60px 11px 22px;
+        }
+
+
+        /* ----------------------------border with gradiant---------------------- */
+        .p3 {
+            width: 300px;
+            margin: 10px;
+            padding: 28px 45px;
+            background: linear-gradient(red 3px, green 107px, blue 182px, purple 211px);
+        }
+    </style>
+    <title>Border Image</title>
+</head>
+
+<body>
+    <div>
+        <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quasi blanditiis eum quo aut nobis
+            sequi harum
+            ipsum inventore amet sapiente rem, obcaecati distinctio laboriosam voluptas a veritatis? Dignissimos, quos?
+        </p>
+        <div class="p3">
+            <p class="p2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex veniam perspiciatis debitis maxime
+                dolorum
+                saepe inventore necessitatibus eaque rerum, aliquid totam doloribus repellat modi explicabo a aspernatur
+                labore asperiores?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
