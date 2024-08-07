@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sales income</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* -------------set main or outer div------- */
+        .main {
+            width: 300px;
+            background-color: rgb(245, 241, 241);
+            padding: 20px;
+        }
+
+        /* -------------set inner or content div--------- */
+        .content {
+            border-bottom: 5px solid blue;
+            background-color: white;
+            padding: 60px 25px 20px 25px;
+            font-family: cursive;
+            color: black;
+        }
+
+        /* -------for sales text------------ */
+        .sale {
+            color: rgba(211, 211, 211, 0.78);
+            margin-top: 10px;
+        }
+
+        /* ----------for first line size increase(pseudo class)---------- */
+        .doller:first-line {
+            font-size: 30px;
+        }
+
+        /* ----------for change doller color(pseudo class)----- */
+        .doller:first-letter {
+            color: rgba(211, 211, 211, 0.78);
+        }
+
+        /* -------------for image set into div-------- */
+        img {
+            width: 275px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- ------for content------- -->
+        <div class="content">
+
+            <!-- ------first line----------- -->
+            <p class="doller">&dollar; &ThinSpace; 1283 </p>
+
+            <!-- ------------second line------- -->
+            <p class="sale">sales Income</p>
+
+            <!-- ------sales image--------- -->
+            <img src="../images/sales_income.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient effect on Login page </title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .outer {
+            width: 800px;
+            height: 600px;
+            border: 1px solid transparent;
+            background:
+                conic-gradient(lightpink 30deg, purple 160deg, lightpink 320deg);
+        }
+
+        @font-face {
+            font-family: 'Preahvihear';
+            src: url(../font/Preahvihear-Regular.ttf);
+        }
+
+        .login {
+            margin: 150px auto;
+            width: fit-content;
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px 30px 30px 30px;
+            background-color: white;
+        }
+
+        input[type=text],
+        button,
+        h3 {
+            font-family: 'Preahvihear';
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="login">
+            <h3>Login</h3><br>
+            <input type="text" name="" id="email" placeholder="Enter Email"><br><br>
+            <input type="text" name="" id="password" placeholder="Enter Password"><br><br>
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
