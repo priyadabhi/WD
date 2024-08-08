@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .image1,
+        .image2,
+        .image5,
+        .image6 {
+            width: 200px;
+            height: 150px;
+
+        }
+
+        .image3,
+        .image4 {
+            width: 200px;
+            height: 320px;
+        }
+
+        div {
+            margin: 5px;
+            padding: 5px 10px 10px 5px;
+            border: 1px solid black;
+            width: fit-content;
+        }
+
+        img {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><img class="image1" src="../images/image1.jpg" alt=""></td>
+                <td><img class="image2" src="../images/image2.jpg" alt=""></td>
+                <td rowspan="2"><img class="image3" src="../images/image3.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><img class="image4" src="../images/image4.jpg" alt=""></td>
+                <td><img class="image5" src="../images/image5.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td><img class="image6" src="../images/image6.jpg" alt=""></td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+
+</html>

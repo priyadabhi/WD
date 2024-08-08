@@ -5,10 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request call Back</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .outer {
+            width: 700px;
+            height: 500px;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(50%);
+        }
+
+        .inner {
+            width: 400px;
+            top: 0%;
+            padding: 10px;
+            background-color: white;
+            margin: 40px 40px auto 240px;
+            position: absolute;
+        }
+
+        h4 {
+            color: green;
+            text-transform: uppercase;
+            padding: 10px 0px;
+        }
+
+        h2 {
+            padding: 5px 0px;
+        }
+
+        .textdiv {
+
+            margin: 20px;
+        }
+
+        input[type=text],
+        button {
+            border-radius: 15px;
+            margin: 5px 0px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        input[type=text] {
+            border: 1px solid lightgrey;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: 1px solid transparent;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div class="outer"><img src="../images/hero_image_2.png" alt="">
+        <div class="inner">
+            <div class="textdiv">
+                <h4>landfarm</h4>
+                <h2>Request Call Back Caurses</h2>
+                <input type="text" name="" id="name" placeholder="your name"><br>
+                <input type="text" name="" id="email" placeholder="Email"><br>
+                <input type="text" name="" id="phone" placeholder="Phone"><br>
+                <input type="text" name="" id="subject" placeholder="Subject"><br>
+                <button>Get It Now</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
