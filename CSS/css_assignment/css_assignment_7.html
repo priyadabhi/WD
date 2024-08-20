@@ -5,6 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex</title>
+    <style>
+        .main {
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            width: 25%;
+            height: 400px;
+            background-color: aqua;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        button {
+            text-align: center;
+            font-size: 20px;
+            margin: 10px 4px;
+        }
+
+        .line1 {
+            width: 23%;
+
+        }
+
+        .line2 {
+            width: 98%;
+
+        }
+
+        .box:nth-child(3) {
+            flex-grow: 2;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,7 +47,7 @@
         <div class="box">
             <h1>
                 First Article
-            </h1><br>
+            </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis vitae quaerat ipsam velit
                 obcaecati quas, eos delectus at porro inventore repudiandae necessitatibus labore autem id ratione
                 praesentium optio sequi.</p>
@@ -22,7 +57,7 @@
         <div class="box">
             <h1>
                 Second Article
-            </h1><br>
+            </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis vitae quaerat ipsam velit
                 obcaecati quas, eos delectus at porro inventore repudiandae necessitatibus labore autem id ratione
                 praesentium optio sequi.</p>
@@ -37,7 +72,7 @@
             <button class="line2">Blush</button><br>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quam blanditiis totam suscipit laborum
                 possimus officia aut voluptates dolores, quas inventore nam nisi expedita illum assumenda enim dolorem
-                reiciendis nihil. <br>
+                reiciendis nihil. <br><br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit repudiandae dolore eveniet
                 necessitatibus aspernatur? Deserunt voluptas nostrum, eveniet suscipit eum nisi, alias necessitatibus
                 sed, ipsam quia non est aliquid!</p>
