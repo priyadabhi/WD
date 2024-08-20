@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sun effect</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 400px;
+            background: linear-gradient(to top, rgb(145, 98, 11) 50px, orange 300px);
+            position: relative;
+            box-shadow: 10px 10px 5px 10px white;
+        }
+
+        .backsidesun {
+            width: 180px;
+            height: 180px;
+            margin: 110px 160px;
+            position: absolute;
+            clip-path: circle(42% at 50% 50%);
+            background-color: #e6df16;
+            box-shadow: inherit;
+            /* -webkit-box-shadow: -1px 1.5px 4.5px 18.5px #dddddd; */
+            /* -moz-box-shadow: -1px 1.5px 4.5px 18.5px #dddddd; */
+            /* box-shadow: -1px 1.5px 4.5px 18.5px #dddddd; */
+            border: solid 3px black;
+
+            /* how to add shadow outer circle */
+        }
+
+        .upsidesun {
+            width: 180px;
+            height: 180px;
+            clip-path: circle(37% at 46% 46%);
+            background-color: orange;
+            margin: 110px 160px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="backsidesun">
+        </div>
+        <div class="upsidesun">
+        </div>
+    </div>
+</body>
+
+</html>

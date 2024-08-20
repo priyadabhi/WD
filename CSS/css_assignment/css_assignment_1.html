@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+        .main {
+            width: 100%;
+            height: 700px;
+            margin: 0;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 3fr 1fr 2fr 2fr 1fr 3fr 3fr;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        .main div {
+            width: 100%;
+            height: 180px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-content: center;
+        }
+
+        .box1 {
+            grid-column: span 4;
+        }
+
+        .box2 {
+            grid-column: span 2;
+        }
+
+        .box3 {
+            grid-row: span 4;
+
+        }
+
+        /* ----------add margin rightside of border------------------ */
+        .text {
+            color: white;
+            text-align: right;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box5 {
+            grid-column: span 4;
+        }
+
+        .box7 {
+            grid-column: span 3;
+        }
+
+        .box8 {
+            grid-column: span 3;
+        }
+
+        .box9 {
+            grid-column: span 2;
+        }
+
+        .box10 {
+            grid-column: span 2;
+        }
+
+        .box11 {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1"><img src="images/image1.jpg" alt=""></div>
+        <div class="box2"><img src="images/image2.jpg" alt=""></div>
+        <div class="box3">
+            <div class="text">
+                <h3>SHUTTER</h3><br>
+                <a href="">Home</a><br>
+                <a href="">Photos</a><br>
+                <a href="">Blog</a><br>
+                <a href="">contact</a>
+            </div>
+        </div>
+        <div class="box4"><img src="images/image3.jpeg" alt=""></div>
+        <div class="box5"><img src="images/image4.jpg" alt=""></div>
+        <div class="box6"><img src="images/image5.jpg" alt=""></div>
+        <div class="box7"><img src="images/image6.jpg" alt=""></div>
+        <div class="box8"><img src="images/image7.jpg" alt=""></div>
+        <div class="box9"><img src="images/image8.jpg" alt=""></div>
+        <div class="box10"><img src="images/image9.jpg" alt=""></div>
+        <div class="box11"><img src="images/image10.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
