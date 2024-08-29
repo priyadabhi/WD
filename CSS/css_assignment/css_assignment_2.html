@@ -13,12 +13,15 @@
             margin: 0;
         }
 
+        /* ---------main div------------------------------------- */
         .main {
             width: 100%;
             height: 800px;
             position: relative;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+        /* -----set background image-------------------------- */
         .image {
             width: 100%;
             height: 500px;
@@ -28,11 +31,13 @@
             position: absolute;
         }
 
+        /* ---------------------set into uppercase--------------- */
         a,
         h1 {
             text-transform: uppercase;
         }
 
+        /* ---------set header---------------------------- */
         .header {
             width: 100%;
             height: 62px;
@@ -42,6 +47,13 @@
             align-items: center;
         }
 
+        /* ----------for paragraph font---------------------- */
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        /* -----------------set menu/nav bar------------------------- */
         .nav {
             display: flex;
             flex: 2;
@@ -49,16 +61,19 @@
             justify-content: center;
         }
 
+        /* -----------set h2------------------------------- */
         h2 {
             border: 2px solid white;
             padding: 5px 10px;
         }
 
+        /* -----------for logo l----------------------- */
         .forl {
             background-color: white;
             color: black;
         }
 
+        /* -----------------for logo ogo------------ */
         .logo {
             display: flex;
             flex: 1;
@@ -67,30 +82,90 @@
             letter-spacing: 2px;
         }
 
+        /* ---------------remove underline of hyperlink------------ */
         a {
             text-decoration: none;
             color: white;
         }
 
-        .imagetext {
-            width: 100%;
-            height: 200px;
+        /* -------------set welcome text-------------------- */
+        .center {
             color: white;
-            position: absolute;
-            margin: 150px auto;
+            text-align: center;
+            margin: 100px 0 0 0;
         }
 
-        /* white bg and text */
+        /* ---------set welcome letter spacing--------------- */
+        .center h1 {
+            letter-spacing: 3px;
+        }
+
+        /* ------------set horizontal line below welcome--------------- */
+        .center hr {
+            width: 25%;
+            border-style: dashed;
+            margin: 15px auto;
+            border-width: 1.5px;
+            border-color: rgb(186, 81, 46);
+        }
+
+        /* -----------for button------------------------- */
+        button {
+            width: 165px;
+            height: 35px;
+            color: white;
+            background-color: rgb(186, 81, 46);
+            text-transform: uppercase;
+            margin: 0 7px;
+        }
+
+        /* ------------------for text on image----------------- */
+        .imagetext {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            margin-top: 62px;
+            align-items: center;
+            height: 340px;
+            gap: 275px;
+        }
+
+        /* ------------set icon on left,right side------------ */
+        .left,
+        .right {
+            color: white;
+            padding: 10px;
+            width: 11px;
+            height: 13px;
+            margin: 0 20px;
+            background-color: darkgray;
+        }
+
+        /*-------for middle icon on image-------------------  */
+        .imageicon {
+            margin: auto;
+            color: white;
+            width: 100%;
+            height: 100px;
+            background-color: darkblue;
+        }
+
+        .imageicon i {
+            font-size: 50px;
+        }
+
+        /* ---------for white bg and text---------------- */
         .text {
             width: 65%;
-            height: 200px;
-            margin: 600px auto;
+            height: 210px;
+            margin: 520px auto;
             display: flex;
             gap: 30px;
         }
 
+        /* ----------for design div border ------------------ */
         .design {
-            border: 1px solid black;
+            border: 1px solid rgb(166, 70, 70);
             padding: 20px;
             font-size: 30px;
             width: 30px;
@@ -99,14 +174,22 @@
             margin: 0px 35%;
         }
 
+        /* -------------for set design icon---------------- */
         .design i {
             transform: rotate(-45deg);
         }
 
+        /* ----------for design div color----------------- */
+        .design-div {
+            color: rgb(166, 70, 70);
+        }
+
+        /* ---------set text below icon--------------------- */
         .text div {
             text-align: center;
         }
 
+        /* -----------for code, idea, support icon------------------- */
         .code i,
         .idea i,
         .support i {
@@ -115,15 +198,29 @@
             font-size: 30px;
             width: 30px;
             height: 30px;
+            color: rgb(166, 70, 70);
             box-shadow: 5px 5px 5px black;
 
+        }
+
+        /* -------------for hr below text------------------- */
+        hr {
+            width: 30px;
+            color: black;
+            margin: 5px auto;
+            border-width: 1px;
+            border-color: black;
         }
     </style>
 </head>
 
 <body>
     <div class="main">
+
+        <!-- for background image------------------------------------------------ -->
         <div class="image"></div>
+
+        <!-- -----------for logo and menu------------------------------------- -->
         <div class="header">
             <div class="logo">
                 <h2 class="forl">L</h2>
@@ -141,26 +238,39 @@
             </div>
         </div>
 
+        <!-- --------------for text on image------------------------------------ -->
         <div class="imagetext">
-            <h4>our client are our first priority </h4>
-            <h1>welcome to sky</h1>
-            <i class="fa-solid fa-angle-right"></i>
-            <i class="fa-solid fa-angle-left"></i>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil exercitationem atque natus iusto
-                blanditiis nisi aut officia veniam, repellat ab magni rerum tempore sint deserunt deleniti assumenda
-                nemo est. Sapiente?</p>
-            <br>
-            <button>get started now</button>
-            <button>learn more</button>
+            <div class="left">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="center">
+                <h4>our client are our first priority </h4><br>
+                <h1>welcome to sky</h1>
+
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil exercitationem atque natus iusto
+                    blanditiis nisi aut officia veniam, repellat ab magni rerum tempore sint deserunt deleniti
+                    assumenda
+                    nemo est. Sapiente?</p>
+                <br><br>
+                <button>get started now</button>
+                <button>learn more</button>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
         </div>
 
+        <!-- -----------------for down icon------------- -->
         <div class="imageicon">
-            <i class="fa-solid fa-angles-down"></i>
+            <i class="fa-solid fa-angle-right"></i>
         </div>
 
+        <!-- --------------for text div------------------------ -->
         <div class="text">
-            <div>
+
+            <!-- -------------------icon and text design-------------- -->
+            <div class="design-div">
                 <div class="design">
                     <i class="fa-solid fa-infinity"></i>
                 </div><br>
@@ -169,6 +279,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe molestias soluta odio?</p>
             </div>
 
+            <!-- ---------------------for icon and text code-------------- -->
             <div class="code">
                 <i class="fa-regular fa-heart"></i><br><br>
                 <h3>clean code</h3>
@@ -176,6 +287,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe molestias soluta odio?</p>
             </div>
 
+            <!-- --------------for icon and text idea--------------------- -->
             <div class="idea">
                 <i class="fa-regular fa-lightbulb"></i><br><br>
                 <h3>creative ideas</h3>
@@ -183,6 +295,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe molestias soluta odio?</p>
             </div>
 
+            <!-- -------------for icon and text support-------------------- -->
             <div class="support">
                 <i class="fa-regular fa-comments"></i><br><br>
                 <h3>free support</h3>
