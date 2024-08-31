@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clip Path</title>
+
+    <!-- ------------font awesome cdn--------------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         * {
             margin: 0;
@@ -18,6 +21,7 @@
             width: 100%;
             height: 800px;
             position: relative;
+            border: 1px solid transparent;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
@@ -58,6 +62,8 @@
             display: flex;
             flex: 2;
             gap: 20px;
+            height: 50px;
+            align-items: center;
             justify-content: center;
         }
 
@@ -86,6 +92,13 @@
         a {
             text-decoration: none;
             color: white;
+            padding: 15px 0;
+            transition: 0.5s ease;
+        }
+
+        .nav a:hover {
+            border-bottom: 2px solid saddlebrown;
+            color: saddlebrown;
         }
 
         /* -------------set welcome text-------------------- */
@@ -142,23 +155,22 @@
         }
 
         /*-------for middle icon on image-------------------  */
-        .imageicon {
-            margin: auto;
-            color: white;
-            width: 100%;
-            height: 100px;
-            background-color: darkblue;
-        }
 
         .imageicon i {
-            font-size: 50px;
+            margin: 480px 49%;
+            color: brown;
+            padding: 5px;
+            font-size: 25px;
+            background-color: #f6eded;
+            border-radius: 50%;
+            position: absolute;
         }
 
         /* ---------for white bg and text---------------- */
         .text {
             width: 65%;
             height: 210px;
-            margin: 520px auto;
+            margin: 550px auto;
             display: flex;
             gap: 30px;
         }
@@ -263,7 +275,7 @@
 
         <!-- -----------------for down icon------------- -->
         <div class="imageicon">
-            <i class="fa-solid fa-angle-right"></i>
+            <i class="fa-solid fa-angles-down"></i>
         </div>
 
         <!-- --------------for text div------------------------ -->

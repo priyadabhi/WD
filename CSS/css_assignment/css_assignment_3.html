@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple background</title>
+
+    <!-- --------------font awesome cdn---------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- --------------------style------------ -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ---------------------google font---------------- */
+        @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+        h1,
+        h3 {
+            font-family: "Nerko One", cursive;
+        }
+
+        .main {
+            width: 100%;
+            height: 700px;
+            position: relative;
+        }
+
+        .leftside {
+            width: 60%;
+            height: 700px;
+            background-color: #000000d2;
+            position: absolute;
+            color: white;
+        }
+
+        .lefttext {
+            width: 60%;
+            margin: 15% 7% 5% 33%;
+            text-align: end;
+        }
+
+        h1 {
+            padding: 0px 30px;
+            letter-spacing: 1px;
+            border-right: 4px solid saddlebrown;
+        }
+
+        h1,
+        h3 {
+            text-transform: uppercase;
+            margin: 5px 0;
+        }
+
+        h3 {
+            color: saddlebrown;
+        }
+
+        .main .leftside .lefttext div {
+            padding: 20px 0;
+        }
+
+        .rightside {
+            width: 40%;
+            height: 700px;
+            position: absolute;
+            background-image: url(https://thumbs.dreamstime.com/b/digital-art-computer-tablet-table-coffee-beans-275162882.jpg);
+            margin: 0 0 0 60%;
+        }
+
+        .center {
+            position: absolute;
+            width: 6%;
+            height: 700px;
+            background-color: transparent;
+            margin: 0 37% 0 58%;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .center div {
+            width: 30%;
+            font-size: 20px;
+            border-radius: 50%;
+            border: 1px solid saddlebrown;
+            background-color: rgb(214, 218, 219);
+            color: saddlebrown;
+            padding: 15px;
+        }
+
+        .desktop {
+            margin-top: 265px;
+        }
+
+        .print {
+            margin-top: 72px;
+        }
+
+        .photo {
+            margin-top: 72px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- ----------for leftside text ------------------->
+        <div class="leftside">
+            <div class="lefttext">
+                <div>
+                    <h1>our services</h1>
+                </div>
+
+                <div>
+                    <h3>web design</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime molestiae ab harum veniam.</p>
+                </div>
+
+                <div>
+                    <h3>print design</h3>
+                    <p>Dolorum ab eveniet maiores minima, ea
+                        mollitia cumque animi vero molestiae repellat aperiam, earum fugiat! Deleniti cupiditate maiores
+                        fugit temporibus minus consequatur!</p>
+                </div>
+
+                <div>
+                    <h3>photograph</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores placeat doloribus
+                        molestiae incidunt laborum voluptate facilis rem atque non.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------for center icons---------------- -->
+        <div class="center">
+            <div class="desktop">
+                <i class="fa-solid fa-display"></i>
+            </div>
+            <div class="print">
+                <i class="fa-solid fa-print"></i>
+            </div>
+            <div class="photo">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+        </div>
+
+        <!-- -----------for rightside image------------ -->
+        <div class="rightside">
+
+        </div>
+    </div>
+</body>
+
+</html>
