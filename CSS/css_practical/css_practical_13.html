@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <!-- ------------------font awesome cdn-------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
     <style>
         * {
             margin: 0;
         }
 
+        /* ------------------outer div--------------------- */
         .outer {
             width: 1200px;
             height: 600px;
@@ -17,6 +22,7 @@
             background-image: linear-gradient(to right, rgb(161, 109, 45) 10%, rgb(228, 156, 22) 50%, rgb(230, 199, 141) 74%);
         }
 
+        /* -------------------inner div----------------------- */
         .inner {
             width: 1000px;
             height: 500px;
@@ -28,6 +34,7 @@
 
         }
 
+        /* -----------------image ------------------ */
         .inimage {
             flex-grow: 2;
             border-radius: 10px 0px 0px 10px;
@@ -39,11 +46,50 @@
             border-radius: 10px 0px 0px 10px;
         }
 
+        /* --------------------text/form------------------ */
         .intext {
             background-color: blueviolet;
             color: white;
             flex-grow: 1;
             border-radius: 0px 10px 10px 0px;
+            padding: 50px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            flex-grow: 1;
+        }
+
+        /* --------set icon------------------------ */
+        .email,
+        .password,
+        .button {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        input,
+        .email i,
+        .password i {
+            background-color: transparent;
+            border: none;
+            flex-grow: 1;
+            border-bottom: 2px solid white;
+            padding: 10px 5px;
+        }
+
+
+        /* -------------for button---------------------------- */
+        button {
+            height: 30px;
+            color: blueviolet;
+            background-color: gainsboro;
+            border: 1px solid transparent;
         }
     </style>
 </head>
@@ -51,16 +97,31 @@
 <body>
     <div class="outer">
         <div class="inner">
+            <!-- --------------image side-------------- -->
             <div class="inimage">
                 <img src="../images/login.jpg" alt="">
             </div>
+
+            <!-- ---------------login side------------------- -->
             <div class="intext">
-                <h3>Login</h3>
-                <p>Hello! lets go started</p>
-                <input type="text" name="" id="email" placeholder="Email ID"><br>
-                <input type="text" name="" id="password" placeholder="Password"><br>
-                <a href="#">Forgot Password? Click Here</a>
-                <button>Continue</button>
+                <h1>Login</h1>
+                <p>Hello! lets go started</p><br><br>
+
+                <div class="email">
+                    <input type="text" name="" id="email" placeholder="Email ID">
+                    <div><i class="fa-solid fa-user"></i></div>
+                </div>
+
+                <div class="password">
+                    <input type="text" name="" id="password" placeholder="Password">
+                    <div><i class="fa-solid fa-key"></i></div>
+                </div><br>
+
+                <div class="button">
+                    <a href="#">Forgot Password? Click Here</a>
+                    <button>Continue &thinsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

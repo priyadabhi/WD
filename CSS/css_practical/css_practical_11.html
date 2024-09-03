@@ -10,6 +10,7 @@
             margin: 0;
         }
 
+        /* -------------------main or outer div--------------- */
         .outer {
             width: 800px;
             height: 600px;
@@ -18,26 +19,38 @@
                 conic-gradient(lightpink 30deg, purple 160deg, lightpink 320deg);
         }
 
+        /* ----------------for font family------------------ */
         @font-face {
             font-family: 'Preahvihear';
             src: url(../font/Preahvihear-Regular.ttf);
         }
 
+        /* ----------------------for login container/div------------- */
         .login {
-            margin: 150px auto;
-            width: fit-content;
+            margin: 180px auto;
+            width: 50%;
+            height: 200px;
             text-align: center;
             border: 1px solid black;
-            padding: 10px 30px 30px 30px;
             background-color: white;
         }
 
+        /* -----------------for input style text--------------- */
         input[type=text],
-        button,
         h3 {
             font-family: 'Preahvihear';
             border-radius: 5px;
+            width: 75%;
+            margin: auto;
+        }
 
+        /* -----------for button ----------------------- */
+        button {
+            background-color: rgb(124, 124, 193);
+            color: white;
+            width: 30%;
+            font-family: 'Preahvihear';
+            border-radius: 5px;
         }
     </style>
 </head>
