@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waves generators</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 1440px;
+            height: 600px;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .wave {
+            position: absolute;
+        }
+
+        .wave div {
+            position: absolute;
+            color: white;
+        }
+
+        .p-1,
+        .p-2,
+        .p-3,
+        .p-4,
+        .p-5,
+        .wave img {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 6px 4px rgb(198, 57, 57);
+            transition: 0.5s ease;
+        }
+
+        .p-1 {
+            bottom: 285px;
+            left: 100px;
+        }
+
+        .p-2 {
+            bottom: 300px;
+            left: 250px;
+        }
+
+        .p-3 {
+            bottom: 229px;
+            left: 500px;
+        }
+
+        .p-4 {
+            bottom: 190px;
+            left: 700px;
+        }
+
+        .p-5 {
+            bottom: 295px;
+            left: 900px;
+        }
+
+        path {
+            fill: rgb(131, 55, 55);
+            stroke: rgb(198, 57, 57);
+            stroke-width: 3px;
+            filter: opacity(0.5);
+        }
+
+        .team,
+        .text {
+            text-transform: uppercase;
+            width: 1440px;
+        }
+
+        .team {
+            top: 50px;
+            text-align: center;
+        }
+
+        .text {
+            top: 415px;
+            left: 200px;
+        }
+
+        .wave img:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="images/wave.png" alt="">
+        <!-- <div class="upside"></div> -->
+        <div class="wave">
+            <div class="team">
+                <h2>our team</h2>
+                <h5>Lorem dolor sit amet consectetur adipisicing elit.</h5>
+            </div>
+            <svg id="visual" viewBox="0 0 1440 600" width="1440" height="600" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path
+                    d="M0 334L60 316.2C120 298.3 240 262.7 360 291.7C480 320.7 600 414.3 720 395.5C840 376.7 960 245.3 1080 179.5C1200 113.7 1320 113.3 1380 113.2L1440 113L1440 601L1380 601C1320 601 1200 601 1080 601C960 601 840 601 720 601C600 601 480 601 360 601C240 601 120 601 60 601L0 601Z">
+                </path>
+            </svg>
+            <div class="p-1">
+                <img src="https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_06.jpg"
+                    alt="">
+            </div>
+            <div class="p-2">
+                <img src="https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_06.jpg"
+                    alt="">
+            </div>
+            <div class="p-3">
+                <img src="https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_06.jpg"
+                    alt="">
+            </div>
+            <div class="p-4">
+                <img src="https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_06.jpg"
+                    alt="">
+            </div>
+            <div class="p-5">
+                <img src="https://www.nordstudio.ch/wp/wp-content/uploads/2018/02/mitarbeiter-business-fotos_06.jpg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h3>
+                    web designer
+                </h3>
+                <h5>ui/ux designer</h5>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
