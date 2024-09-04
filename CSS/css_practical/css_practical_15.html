@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cooking</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            text-transform: capitalize;
+        }
+
+        img {
+            width: 100%;
+            height: 80px;
+            filter: opacity(0.5);
+            object-fit: cover;
+            position: relative;
+        }
+
+        .nav {
+            position: absolute;
+            height: 50px;
+            top: 20px;
+            width: 90%;
+            margin: 0 5%;
+            display: flex;
+        }
+
+        .logo {
+            display: flex;
+            flex: 2;
+        }
+
+        h3,
+        .logo i {
+            font-size: 40px;
+            color: black;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            height: 50px;
+            align-items: center;
+        }
+
+        .search {
+            display: flex;
+        }
+
+        .search input {
+            height: 40px;
+            width: 150px;
+            padding-left: 5px;
+            border-radius: 30px 0 0 30px;
+            border: 1px solid transparent;
+        }
+
+        .sicon {
+            height: 43px;
+            width: 30px;
+            border-radius: 0 30px 30px 0;
+            background-color: rgb(215, 70, 70);
+            place-content: center;
+            padding-left: 6px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            text-shadow: 0px 0px 7px #FFEB3B;
+        }
+
+        .fa-moon {
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="../images/food.jpg" alt="">
+        <div class="nav">
+            <div class="logo">
+                <div class="name">
+                    <h3>cooking</h3>
+                </div>
+                <div class="clogo"><i class="fa-solid fa-bread-slice"></i></div>
+            </div>
+            <div class="menu">
+                <a href="">home</a>
+                <a href="">about us</a>
+                <a href="">classes</a>
+                <a href="">blog <i class="fa-solid fa-angle-down"></i></a>
+                <a href="">pages <i class="fa-solid fa-angle-down"></i></a>
+                <a href="">contact</a>
+                <div class="search">
+                    <input type="text" name="" id="" placeholder="enter keywords...">
+                    <div class="sicon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
