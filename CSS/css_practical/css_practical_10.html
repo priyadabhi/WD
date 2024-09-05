@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image transform</title>
+</head>
+<style>
+    .outer {
+        width: 100%;
+        height: 600px;
+        margin: 0;
+        border: 1px solid transparent;
+        background-color: #c9ece0;
+    }
+
+    .main {
+        width: 90%;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 100px auto;
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        vertical-align: middle;
+    }
+
+    .main div {
+        border-radius: 10px;
+        box-shadow: 0 0 8px 6px #5762a2;
+
+    }
+
+    .image1 {
+        transform-origin: top left;
+        transform: scale(0.9);
+    }
+
+    .image2 {
+        transform-origin: bottom left;
+        transform: scale(0.8);
+    }
+
+    .image3 {
+        transform-origin: center;
+        transform: scale(1.2);
+    }
+
+    .image4 {
+        transform: scale(0.8) translateX(25px);
+    }
+
+    .image5 {
+        transform: scale(1) rotate(334deg) scaleY(1.1);
+        transform-origin: bottom;
+    }
+
+    .image6 {
+        transform-origin: top left;
+        transform: scale(0.8) translateY(-5px);
+    }
+
+    .image7 {
+        transform: scale(1, 1.2) translate(-25px, 20px);
+        transform-origin: top left;
+    }
+
+    .image8 {
+        transform: scale(1, 1.2) translate(48px, -2px);
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="main">
+            <div class="image1">
+                <img src="../images/transform1.jpeg" alt="">
+            </div>
+            <div class="image2">
+                <img src="../images/transform2.jpeg" alt="">
+            </div>
+            <div class="image3">
+                <img src="../images/transform3.jpg" alt="">
+            </div>
+            <div class="image4">
+                <img src="../images/transform4.jpg" alt="">
+            </div>
+            <div class="image5">
+                <img src="../images/transform8.jpeg" alt="">
+            </div>
+            <div class="image6">
+                <img src="../images/transform6.jpg" alt="">
+            </div>
+            <div class="image7">
+                <img src="../images/transform7.jpeg" alt="">
+            </div>
+            <div class="image8">
+                <img src="../images/transform9.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
