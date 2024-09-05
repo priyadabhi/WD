@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 1000px;
+            height: 600px;
+            text-transform: capitalize;
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px 35px;
+        }
+
+        .main h1:nth-child(1) {
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .card-main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .card {
+            box-shadow: 0 0 5px 5px #8080801f;
+        }
+
+        .photo {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        img {
+            object-fit: cover;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .text {
+            padding: 0 10px;
+            font-family: math;
+        }
+
+        p {
+            margin: 20px auto;
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(10, 10, 57);
+            padding: 8px 20px;
+            letter-spacing: 0.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>our team</h1>
+        <h1>our expert team member</h1>
+        <div class="card-main">
+            <div class="card">
+                <div class="photo">
+                    <img src="../images/employee.png.crdownload" alt="">
+                </div>
+                <div class="text">
+                    <h2>Jack Will</h2>
+                    <h4>Manager</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <a href="">Profile</a><br><br><br><br><br>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="../images/employee.png.crdownload" alt="">
+                </div>
+                <div class="text">
+                    <h2>Jack Will</h2>
+                    <h4>Manager</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <a href="">Profile</a><br><br><br><br><br>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="../images/employee.png.crdownload" alt="">
+                </div>
+                <div class="text">
+                    <h2>Jack Will</h2>
+                    <h4>Manager</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <a href="">Profile</a><br><br><br><br><br>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo">
+                    <img src="../images/employee.png.crdownload" alt="">
+                </div>
+                <div class="text">
+                    <h2>Jack Will</h2>
+                    <h4>Manager</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+                    <a href="">Profile</a><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

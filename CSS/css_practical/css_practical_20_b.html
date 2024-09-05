@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliping</title>
+    <style>
+        .main {
+            width: 900px;
+            margin: auto;
+            border: 2px solid black;
+            text-align: center;
+            position: relative;
+        }
+
+        img {
+            width: 900px;
+            vertical-align: middle;
+        }
+
+        .flip {
+            transform: scale(0) rotateX(0deg);
+            transition: 0.4s linear;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            place-content: center;
+        }
+
+        .text {
+            width: 60%;
+            height: 200px;
+            color: white;
+            transform: scale(0) rotateX(0 deg);
+            transition: 0.4s linear;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 70px;
+            color: wheat;
+        }
+
+        .main:hover .flip {
+            background-color: black;
+            transform: scale(1)rotateX(180deg);
+        }
+
+        .main:hover .text {
+            transform: scale(1) rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="../images/image1.jpg" alt="">
+        <h1 class="overlay">Fliping</h1>
+        <div class="overlay flip">
+            <div class="text">
+                <h2>Flip Image</h2><br><br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident minus fugiat odit culpa
+                    recusandae iste doloribus ipsum dignissimos at libero, maxime, blanditiis, enim quisquam autem
+                    officiis maiores aut repudiandae quo.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
