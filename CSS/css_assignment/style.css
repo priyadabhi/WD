@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------hyperlink---------- */
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* -----------------------------list-------- */
+li {
+    list-style-type: none;
+}
+
+/* ----------------main div------------------- */
+.main {
+    position: relative;
+    width: 100%;
+    font-family: math;
+}
+
+/* ------------background in circle----------- */
+.circle {
+    clip-path: ellipse(60% 38% at 50% 50%);
+    height: 1440px;
+    top: -475px;
+    left: -2px;
+    background-color: rgb(217 213 229 / 39%);
+    border: 1px solid #F0EBFA;
+    position: absolute;
+}
+
+/* -----navigation  bar------------- */
+.nav {
+    margin: 2rem 5rem;
+    display: flex;
+}
+
+/* ------------logo---------------- */
+.logo {
+    font-family: cursive;
+    flex: 2;
+    z-index: 2;
+}
+
+/* -----menu------------------- */
+.menu {
+    font-size: calc(0.8vw + 8px);
+    z-index: 2;
+}
+
+.menu i {
+    font-size: calc(0.5vw + 5px);
+}
+
+/* ----------login-------------- */
+.log-free {
+    display: flex;
+    align-items: center;
+    font-size: calc(0.8vw + 8px);
+    gap: 20px;
+    z-index: 2;
+}
+
+.log-free button {
+    background-color: #ECE5FF;
+    color: #794CFF;
+    font-size: calc(0.7vw + 7px);
+    padding: 10px;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 6%;
+    top: 0.5%;
+}
+
+.menu-icon i {
+    font-size: calc(2.5vw + 25px);
+}
+
+/* ---------home text------------ */
+.home-text {
+    margin: 5rem 10rem 0 10rem;
+    height: 1300px;
+    position: relative;
+}
+
+.save-account {
+    width: 100%;
+    display: flex;
+    font-size: calc(0.9vw + 9px);
+    text-transform: capitalize;
+    height: 40px;
+}
+
+.save {
+    background-color: #81C43B;
+    color: white;
+    border-radius: 30px;
+    padding: 0.3rem 0.8rem;
+    z-index: 2;
+    position: absolute;
+    left: 40%;
+}
+
+.account {
+    flex: 2;
+    background-color: #ccdcbd;
+    border-radius: 0 30px 30px 0;
+    padding: 0.3rem 0.8rem 0.3rem 1.7rem;
+    left: 49%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* ----------------text--------------- */
+.home-text h1 {
+    font-size: calc(3.0vw + 30px);
+    margin: 2rem 4rem;
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    line-height: 65px;
+}
+
+.home-text .p1 {
+    font-size: calc(1.0vw + 10px);
+    text-align: center;
+    position: absolute;
+    margin: 0 10rem;
+    left: 10%;
+    top: 18%;
+    color: #4E5A65;
+
+}
+
+.home-text .input,
+img,
+.p2,
+.survey-div {
+    position: absolute;
+}
+
+.home-text .input {
+    display: flex;
+    top: 26%;
+    left: 25%;
+}
+
+.home-text input {
+    padding: 1rem 4rem 1rem 2rem;
+    font-size: calc(1.0vw + 10px);
+    border: 1px solid gray;
+}
+
+.home-text button {
+    padding: 1rem 4rem;
+    color: white;
+    background-color: #794CFF;
+    font-size: calc(1.0vw + 10px);
+    border: 1px solid transparent;
+}
+
+/* --------image---------------- */
+.home-text img {
+    top: 33%;
+    left: 10%;
+}
+
+/* -------------------google,etc... images----------- */
+.home-text .p2 {
+    top: 92%;
+    left: 38%;
+}
+
+.google,
+.airbnd,
+.facebook,
+.slack,
+.hubspot {
+    position: absolute;
+    top: 96%;
+}
+
+.google {
+    left: 10%;
+}
+
+.airbnd {
+    left: 30%;
+}
+
+.facebook {
+    left: 50%;
+}
+
+.hubspot {
+    left: 70%;
+}
+
+.slack {
+    left: 90%;
+}
+
+/* -----------------timeline and survey div------------ */
+.timeline-survey {
+    width: 100%;
+    height: 600px;
+    background-color: #e1deea;
+}
+
+.timeline-survey img {
+    margin: 2.5rem 0 0 6rem;
+}
+
+.survey-div {
+    width: 28%;
+    padding: 4rem 4rem 0 0;
+    left: 65%;
+}
+
+.survey-div h2 {
+    margin: 5px 0;
+}
+
+.survey-div p {
+    font-size: calc(0.8vw + 8px);
+}
+
+.survey {
+    border-left: 5px solid blue;
+    padding: 1rem;
+    background-color: aliceblue;
+    border-radius: 0 10px 10px 0;
+}
+
+.resolve,
+.plan {
+    padding: 1rem;
+    border-bottom: 2px solid rgb(173, 171, 171);
+}
+
+.track {
+    padding: 1rem;
+}
+
+/* ------------work easy div--------------- */
+.workeasy {
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+h1 {
+    font-size: calc(2vw + 20px);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.team,
+.collaborative,
+.learning {
+    top: 20%;
+    position: absolute;
+    width: 25%;
+    height: 300px;
+}
+
+.team {
+    left: 10%;
+}
+
+.collaborative {
+    left: 40%;
+}
+
+.learning {
+    left: 70%;
+}
+
+.workeasy h2 {
+    top: 27%;
+    position: absolute;
+}
+
+.workeasy p {
+    top: 37%;
+    font-size: calc(0.7vw + 7px);
+    position: absolute;
+}
+
+.anonymous,
+.conversation,
+.exclusive {
+    top: 60%;
+    position: absolute;
+    width: 25%;
+    height: 300px;
+}
+
+.anonymous {
+    left: 10%;
+}
+
+.conversation {
+    left: 40%;
+}
+
+.exclusive {
+    left: 70%;
+}
+
+/* -----------------we work div------------------- */
+.wework {
+    width: 100%;
+    height: 550px;
+    background-color: #e1deea;
+    position: relative;
+}
+
+.work-text {
+    width: 40%;
+    padding: 5rem;
+    position: absolute;
+}
+
+.work-text h1 {
+    text-align: left;
+    margin: 2rem 5rem;
+}
+
+.work-text p {
+    margin: 1.5rem 5rem;
+    font-size: calc(0.8vw + 8px);
+}
+
+.work-text button {
+    margin: 1.5rem 5rem;
+    color: white;
+    background-color: #796EFF;
+    padding: 1rem;
+    font-size: calc(0.8vw + 8px);
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.wework .graph {
+    top: 10%;
+    left: 50%;
+    position: absolute;
+}
+
+/* ----------------customer love div------------- */
+.customerlove {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.customerlove h1 {
+    margin: 5rem 0 0 0;
+}
+
+.customerlove .p3 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: calc(0.8vw + 8px);
+}
+
+.jorge,
+.bell,
+.beth {
+    top: 60%;
+    width: 15%;
+    height: 100px;
+    position: absolute;
+    padding: 2rem;
+}
+
+.jorge {
+    border-top: 5px solid rgba(50, 43, 43, 0.49);
+}
+
+.jorge h3,
+.bell h3,
+.beth h3 {
+    position: absolute;
+    left: 30%;
+}
+
+.jorge p,
+.bell p,
+.beth p {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+
+.jorge {
+    left: 20%;
+}
+
+.bell {
+    left: 40%;
+}
+
+.beth {
+    left: 60%;
+}
+
+
+/* -------play store------------------------ */
+.store {
+    width: 80%;
+    background-color: #796EFF;
+    margin: 0 auto;
+    color: white;
+    padding: 1rem;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 10px;
+}
+
+.store h2 {
+    margin: 0;
+    width: 50%;
+    font-size: calc(1.5vw + 15px);
+    top: 25%;
+    left: 5%;
+    position: absolute;
+}
+
+.googleplay {
+    width: 25%;
+    top: 35%;
+    left: 60%;
+    position: absolute;
+}
+
+.appstore {
+    width: 25%;
+    top: 35%;
+    left: 80%;
+    position: absolute;
+}
+
+/* --------------footer div------------------ */
+.footer {
+    width: 100%;
+    height: 380px;
+    margin-top: 4rem;
+    background-color: black;
+    color: white;
+}
+
+.footer-text {
+    width: 70%;
+    margin: auto;
+    padding: 3rem 5rem;
+    display: flex;
+    gap: 120px;
+    line-height: 40px;
+}
+
+.last-line {
+    display: flex;
+    padding: 2rem 9rem;
+    gap: 30px;
+}
+
+.last-line .all {
+    flex: 2;
+}
+
+/* ----------------------mobile screen------------ */
+
+@media (max-width:576px) {
+
+    .main {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .circle {
+        width: 1035px;
+    }
+
+    .nav {
+        margin: 1.5rem;
+    }
+
+    .nav .menu,
+    .log-free {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo,
+    .menu-icon {
+        margin: 2rem 1rem;
+    }
+
+    .save {
+        display: none;
+    }
+
+    .account {
+        border-radius: 20px;
+        font-size: 15px;
+        width: 40%;
+        left: 30%;
+        top: -1%;
+    }
+
+    .home-text {
+        width: 100%;
+        height: 900px;
+        margin: unset;
+    }
+
+    .home-text h1 {
+        width: 90%;
+        font-size: calc(2.8vw + 28px);
+        left: -11%;
+        line-height: 46px;
+        top: 1%;
+    }
+
+    .home-text .p1 {
+        font-size: calc(1.5vw + 15px);
+        top: 21%;
+        width: 90%;
+        left: 6%;
+        margin: unset;
+    }
+
+    .home-text .input {
+        top: 35%;
+        flex-direction: column;
+        margin: unset;
+        width: 80%;
+        left: 10%;
+        gap: 15px;
+    }
+
+    .input input,
+    .input button {
+        font-size: calc(1.5vw + 15px);
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .home-text img {
+        top: 55%;
+        margin: unset;
+        left: 1%;
+        width: 100%;
+    }
+
+    .home-text .p2 {
+        top: 87%;
+        margin: unset;
+        font-size: calc(0.8vw + 8px);
+        left: 18%;
+    }
+
+    .brand-image {
+        left: -4%;
+        position: absolute;
+        top: 90%;
+        width: 100%;
+    }
+
+    .google,
+    .airbnd,
+    .facebook,
+    .slack,
+    .hubspot {
+        top: 54%;
+        width: 10%;
+        height: 20px;
+    }
+
+    .timeline-survey {
+        height: 900px;
+        margin: unset;
+        border-top: 1px solid gray;
+        position: relative;
+    }
+
+    .timeline-survey img {
+        width: 90%;
+        margin: unset;
+        left: 5%;
+        top: 5%;
+    }
+
+    .survey-div {
+        width: 90%;
+        margin: unset;
+        top: 30%;
+        left: 5%;
+        font-size: calc(1.2vw + 12px);
+        text-align: center;
+    }
+
+    .survey-div p {
+        font-size: calc(1.1vw + 11px);
+        margin: 1rem;
+    }
+
+    .survey {
+        border-radius: 10px 10px 0 0;
+        border-left: unset;
+        border-bottom: 10px solid blue;
+    }
+
+    .workeasy h1 {
+        font-size: calc(2.0vw + 20px);
+    }
+
+    .workeasy {
+        font-size: calc(2.0vw + 20px);
+        height: 800px;
+    }
+
+    .team,
+    .collaborative,
+    .learning {
+        width: 90%;
+        text-align: center;
+        left: 0;
+        margin: unset;
+    }
+
+    .team img,
+    .collaborative img,
+    .learning img {
+        height: 80px;
+    }
+
+    .team h2 {
+        top: 27%;
+        left: 18%;
+        font-size: calc(1.8vw + 18px);
+    }
+
+    .collaborative h2,
+    .learning h2 {
+        top: 27%;
+        left: 33%;
+        font-size: calc(1.8vw + 18px);
+    }
+
+    .team p,
+    .collaborative p,
+    .learning p {
+        top: 38%;
+        left: 15%;
+        text-align: center;
+        font-size: calc(1.3vw + 13px);
+    }
+
+    .team {
+        top: 8%;
+    }
+
+    .collaborative {
+        top: 33%;
+    }
+
+    .learning {
+        top: 55%;
+    }
+
+    .anonymous,
+    .conversation,
+    .exclusive {
+        display: none;
+    }
+
+    .workeasy button {
+        font-size: calc(1.5vw + 15px);
+        text-align: center;
+        padding: 1rem 2rem;
+        top: 85%;
+        left: 22%;
+        background-color: #ECE5FF;
+        position: absolute;
+        color: #7259FA;
+        border: 1px solid transparent;
+    }
+
+    .wework {
+        width: 100%;
+        height: 550px;
+        position: relative;
+        margin: unset;
+    }
+
+    .wework .graph {
+        width: 100%;
+        top: 7%;
+        left: 5%;
+    }
+
+    .graph img {
+        width: 90%;
+        top: 5%;
+    }
+
+    .work-text {
+        width: 90%;
+        top: 50%;
+    }
+
+    .work-text h1 {
+        font-size: calc(2.1vw + 21px);
+        text-align: center;
+        margin: unset;
+        width: 80%;
+        position: absolute;
+        left: -2%;
+        top: 10%;
+    }
+
+    .work-text p {
+        width: 65%;
+        font-size: calc(1.2vw + 12px);
+        text-align: center;
+        position: absolute;
+        left: -10%;
+        top: 45%;
+    }
+
+    .work-text button {
+        padding: 1rem 2rem;
+        width: 60%;
+        font-size: calc(1.2vw + 12px);
+        text-align: center;
+        position: absolute;
+        left: -7%;
+        top: 93%;
+    }
+
+    .customerlove {
+        width: 100%;
+        height: 350px;
+    }
+
+    .customerlove h1 {
+        width: 90%;
+        font-size: calc(1.5vw + 15px);
+        left: 5%;
+        position: absolute;
+        top: -15%;
+    }
+
+    .customerlove .p3 {
+        width: 70%;
+        font-size: calc(1.2vw + 12px);
+        left: 15%;
+        top: 20%;
+        position: absolute;
+    }
+
+    .customerlove .jorge {
+        top: 60%;
+        left: 30%;
+        border: unset;
+        text-align: center;
+    }
+
+    .jorge h3 {
+        top: 50%;
+        left: 13%;
+        width: 112%;
+    }
+
+    .jorge p {
+        top: 65%;
+    }
+
+    .customerlove .bell,
+    .customerlove .beth {
+        display: none;
+    }
+
+    .store {
+        width: 100%;
+        border-radius: unset;
+        margin: unset;
+        height: 250px;
+    }
+
+    .store h2 {
+        width: 80%;
+        text-align: center;
+        padding-left: 2%;
+        font-size: calc(1.8vw + 18px);
+        top: 12%;
+    }
+
+    .store .googleplay {
+        top: 40%;
+        left: 25%;
+    }
+
+    .store .appstore {
+        top: 70%;
+        left: 25%;
+    }
+
+    .footer {
+        height: 420px;
+    }
+
+    .footer-text i {
+        position: absolute;
+        left: 88%;
+        padding-top: 0.5rem;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem;
+    }
+
+    .footer li {
+        display: none;
+    }
+
+    .footer hr {
+        margin-top: 4rem;
+    }
+
+    .last-line .insta,
+    .last-line .web,
+    .last-line .twit,
+    .last-line .youtube {
+        display: none;
+    }
+
+    .last-line {
+        padding: 1rem;
+    }
+
+    .last-line .all p {
+        text-align: left;
+    }
+}
+
+/* ---------------------------------------- */
+@media (min-width:992px) {
+    .circle {
+        width: 100%;
+    }
+
+    .nav .menu {
+        display: block;
+        display: flex;
+        flex: 3;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .log-free {
+        display: block;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .anonymous,
+    .conversation,
+    .exclusive {
+        display: block;
+    }
+
+    .workeasy button {
+        display: none;
+    }
+
+    .footer-text i {
+        display: none;
+    }
+
+}
