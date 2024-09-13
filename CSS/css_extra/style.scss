@@ -146,6 +146,10 @@ p {
                         border: 1px solid $f2;
                     }
                 }
+
+                @media (max-width:576px) {
+                    display: none;
+                }
             }
         }
 
@@ -177,6 +181,11 @@ p {
                 width: 100%;
                 height: 100%;
             }
+
+            @media (max-width:576px) {
+                margin: $m1;
+
+            }
         }
 
         .text {
@@ -192,6 +201,16 @@ p {
                 padding: $p3;
                 font-family: Sofadi One;
             }
+
+            @media (max-width:576px) {
+                margin: $m1;
+                width: 90%;
+            }
+        }
+
+        @media (max-width:576px) {
+            flex-direction: column;
+            padding: $p2;
         }
     }
 
@@ -238,6 +257,15 @@ p {
                     color: $f2;
                 }
             }
+
+            @media (max-width:576px) {
+                grid-template-columns: repeat(1, 1fr);
+                margin: $m1;
+            }
+        }
+
+        @media (max-width:576px) {
+            padding: $p2;
         }
     }
 
@@ -247,12 +275,20 @@ p {
         height: 700px;
         position: relative;
 
+        @media (max-width:576px) {
+            margin: $m2;
+        }
+
         h1 {
             text-align: center;
         }
 
         .designdiv {
             margin: $m5;
+
+            @media (max-width:576px) {
+                margin: $m1;
+            }
 
             .design-menu {
                 display: flex;
@@ -271,6 +307,10 @@ p {
                         z-index: 1;
                     }
                 }
+
+                @media (max-width:576px) {
+                    display: none;
+                }
             }
 
             .bracelets {
@@ -286,6 +326,15 @@ p {
                     img {
                         width: 100%;
                         height: 400px;
+
+                        @media (max-width:576px) {
+                            height: 350px;
+                        }
+                    }
+
+                    @media (max-width:576px) {
+                        width: 90%;
+                        height: 350px;
                     }
                 }
 
@@ -305,7 +354,15 @@ p {
                     p {
                         line-height: 30px;
                     }
+
+                    @media (max-width:576px) {
+                        padding: $p1;
+                        width: 85%;
+                        top: 110%;
+                        left: 0;
+                    }
                 }
+
             }
 
             .bangles,
@@ -349,6 +406,10 @@ p {
                         line-height: 30px;
                     }
                 }
+
+                @media (max-width:576px) {
+                    display: none;
+                }
             }
         }
     }
@@ -358,9 +419,17 @@ p {
         background-color: $bg1;
         padding: $p4 $p7;
 
+        @media (max-width:576px) {
+            padding: $p1;
+        }
+
         h1 {
             text-align: center;
             color: $f1;
+
+            @media (max-width:576px) {
+                margin-top: $m2;
+            }
         }
 
         .latest-design {
@@ -368,6 +437,10 @@ p {
             margin: $m6 ;
             grid-template-columns: repeat(3, 1fr);
             gap: 60px;
+
+            @media (max-width:576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
 
             .image1,
             .image2,
@@ -418,10 +491,22 @@ p {
         grid-template-columns: repeat(2, 1fr);
         padding: $p6 $p7;
 
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: $p1;
+        }
+
         h1 {
             padding-bottom: $p6;
             grid-column: span 2;
             text-align: center;
+
+            @media (max-width:576px) {
+                grid-column: unset;
+                text-align: left;
+                margin: $m2 $m6;
+                padding-bottom: unset;
+            }
         }
 
         h3 {
@@ -429,6 +514,11 @@ p {
             margin-bottom: $m5;
             text-shadow: 0 0 7px $f2;
             text-align: center;
+
+            @media (max-width:576px) {
+                text-align: left;
+                margin-bottom: $m1;
+            }
         }
 
         h2 {
@@ -440,6 +530,13 @@ p {
             margin: 0 $m6;
         }
 
+        @media (max-width:576px) {
+            iframe {
+                width: 100%;
+            }
+
+        }
+
     }
 
     // footer div----------------------------
@@ -447,6 +544,10 @@ p {
         background: $black;
         color: $f1;
         padding: $p6 $p7 $p1 $p7;
+
+        @media (max-width:576px) {
+            padding: $p1;
+        }
 
         h4 {
             margin: $m5;
@@ -457,6 +558,13 @@ p {
             height: 50px;
             width: 90%;
             margin: 0 $m5;
+
+            @media (max-width:576px) {
+                flex-direction: column;
+                margin: $m1;
+                gap: 5px;
+                height: 120px;
+            }
 
             input[type="text"] {
                 flex: 2;
@@ -481,6 +589,9 @@ p {
             gap: 40px;
             margin: $m5;
 
+            @media (max-width:576px) {
+                flex-direction: column;
+            }
 
             .f-about {
                 flex: 1.2;
