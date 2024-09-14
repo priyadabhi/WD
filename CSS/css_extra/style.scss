@@ -168,10 +168,36 @@ p {
                     font-size: $font2;
                 }
 
+                .screen-menu {
+                    width: 500%;
+                    margin: auto;
+                    background-color: $bg2;
+                    color: $f1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    position: absolute;
+                    top: 100%;
+                    left: -320%;
+                    text-align: center;
+                    transform: scale(0);
+                    transform-origin: top;
+                    transition: 0.5s ease;
+
+                    a {
+                        font-size: $font2;
+                    }
+                }
+
                 &:hover i {
                     color: $bg2;
                 }
+
+                &:hover .screen-menu {
+                    transform: scale(1);
+                }
             }
+
         }
 
     }

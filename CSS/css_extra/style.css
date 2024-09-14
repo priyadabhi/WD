@@ -118,8 +118,30 @@ p {
 .main .homepage .header .menubar-icon i {
   font-size: calc(1.6vw + 16px);
 }
+.main .homepage .header .menubar-icon .screen-menu {
+  width: 500%;
+  margin: auto;
+  background-color: #88760c;
+  color: #DBC8C1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  left: -320%;
+  text-align: center;
+  transform: scale(0);
+  transform-origin: top;
+  transition: 0.5s ease;
+}
+.main .homepage .header .menubar-icon .screen-menu a {
+  font-size: calc(1.6vw + 16px);
+}
 .main .homepage .header .menubar-icon:hover i {
   color: #88760c;
+}
+.main .homepage .header .menubar-icon:hover .screen-menu {
+  transform: scale(1);
 }
 .main .page-heading {
   background-color: #88760c;
