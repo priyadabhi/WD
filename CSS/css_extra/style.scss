@@ -151,6 +151,27 @@ p {
                     display: none;
                 }
             }
+
+            .menubar-icon {
+                right: 10%;
+                top: 30%;
+                position: absolute;
+                display: none;
+                border: 1px solid $bg2;
+                padding: $p1;
+
+                @media (max-width:576px) {
+                    display: block;
+                }
+
+                i {
+                    font-size: $font2;
+                }
+
+                &:hover i {
+                    color: $bg2;
+                }
+            }
         }
 
     }
@@ -164,6 +185,10 @@ p {
         position: absolute;
         width: 100%;
         top: 630px;
+
+        @media (max-width:576px) {
+            top: 640px;
+        }
     }
 
     // about us div------------------------------
@@ -709,6 +734,11 @@ p {
                 border-radius: 10px;
             }
 
+            @media (max-width:576px) {
+                grid-template-columns: repeat(2, 1fr);
+                margin: $m2;
+            }
+
         }
 
         .a-count {
@@ -725,6 +755,10 @@ p {
             .design,
             .client {
                 width: 30%;
+            }
+
+            @media (max-width:576px) {
+                height: 150px;
             }
         }
     }
@@ -768,6 +802,10 @@ p {
 
             .conatct-gettouch {
                 grid-column: span 2;
+
+                @media (max-width:576px) {
+                    grid-column: span 3;
+                }
             }
 
             .contact-form {
@@ -803,6 +841,15 @@ p {
                 }
             }
 
+            @media (max-width:576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media (max-width:576px) {
+            margin: $m1;
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -848,6 +895,14 @@ p {
                     font-size: $font3;
                 }
             }
+
+            @media (max-width:576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media (max-width:576px) {
+            padding: $p2;
         }
     }
 
@@ -926,7 +981,6 @@ p {
                     transform: scale(2.0) translate(150px, -80px);
                     box-shadow: 0 0 10px 200px #07070752;
                 }
-
             }
 
             .image7 {
@@ -937,6 +991,31 @@ p {
                     box-shadow: 0 0 10px 300px #07070752;
                 }
             }
+
+            @media (max-width:576px) {
+
+                .image1,
+                .image2,
+                .image3,
+                .image4,
+                .image5,
+                .image6,
+                .image7 {
+                    &:hover img {
+                        transform: unset;
+                        box-shadow: unset;
+                    }
+                }
+            }
+
+            @media (max-width:576px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width:576px) {
+            padding: $p3;
         }
     }
 
