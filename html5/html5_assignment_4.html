@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        .rect1 {
+            width: 200px;
+            height: 200px;
+            fill: #d75d31;
+            stroke: black;
+            stroke-width: 3px;
+        }
+
+        .rect2 {
+            width: 150px;
+            height: 400px;
+            fill: #aa1313;
+            stroke: black;
+            stroke-width: 2px;
+        }
+
+        polygon {
+            fill: yellowgreen;
+            stroke: #5c055c;
+            stroke-width: 3px;
+        }
+
+        svg {
+            background-color: antiquewhite;
+            border: 2px solid #4d4b4b;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="1000px" height="500px">
+        <rect x="50" y="50" rx="20" ry="20" class="rect1"></rect>
+        <rect x="700" y="50" rx="10" ry="10" class="rect2"></rect>
+        <polygon points="450,50,300,300,600,300"></polygon>
+    </svg>
+</body>
+
+</html>
