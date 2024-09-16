@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div class="main">
+            <h2>student registration form</h2>
+            <div class="form">
+
+                <div class="firstname">
+                    <label for="fname">First Name:</label>
+                </div>
+                <div class="firstname">
+                    <input type="text" name="" id="fname" placeholder="Enter your first name" pattern="[a-zA-Z]{3,6}"
+                        title="please enter 3 to 6 alphabets" required>
+                </div>
+
+                <div class="lastname">
+                    <label for="lname">Last Name:</label>
+                </div>
+                <div class="lastname">
+                    <input type="text" name="" id="lname" placeholder="Enter your last name" pattern="[a-zA-Z]{3,6}"
+                        required>
+                </div>
+
+                <div class="email">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="email">
+                    <input type="email" name="" id="email" placeholder="it should contain @ .." required>
+                </div>
+
+                <div class="mobileno">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="mobileno">
+                    <input type="text" name="" id="mobile" placeholder="Only 10 digits are allowed" pattern="[0-9]{10}"
+                        title="please enter 10 digits" required>
+                </div>
+
+                <div class="gender">
+                    <label for="gender">Gender:</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" checked>
+                    <label for="female">Female:</label>
+                </div>
+
+                <div class="dateofbirth">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="dateofbirth">
+                    <input type="date" name="" id="dob" required title="please select the date">
+                </div>
+
+                <div class="adddress">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="address">
+                    <textarea name="" id="address" rows="8" cols="30" required
+                        title="please enter your address"></textarea>
+                </div>
+
+                <div class="city">
+                    <label for="city">City:</label>
+                </div>
+                <div class="city">
+                    <input type="text" name="" id="city" pattern="[A-Za-z]{3,10}" required
+                        title="please enter city name 3 to 10 alphabets">
+                </div>
+
+                <div class="areapin">
+                    <label for="areapin">Area PIN:</label>
+                </div>
+                <div class="areapin">
+                    <input type="text" name="" id="areapin" pattern="[0-9]{6}" required title="please enter 6 digits">
+                </div>
+
+                <div class="state">
+                    <label for="state">State:</label>
+                </div>
+                <div class="state">
+                    <input type="text" name="" id="state" pattern="[A-Za-z]{3,15}" required>
+                </div>
+
+                <div class="qualification">
+                    <label for="qualification">Qualification:</label><br>
+                </div>
+                <div class="qualification">
+                    <select name="" id="qualification" required>
+                        <optgroup label="Select Qualification"></optgroup>
+                        <option value="">Select Qualification:</option>
+                        <option value="">10th pass</option>
+                        <option value="">12th pass</option>
+                        <option value="">I.T.I.</option>
+                        <option value="">Diploma</option>
+                        <option value="">B.Com</option>
+                        <option value="">BBA</option>
+                        <option value="">B.Tech</option>
+                    </select>
+                </div>
+
+                <div class="specialization">
+                    <label for="specialization">Specialization:</label>
+                </div>
+                <div class="specialization">
+                    <input type="checkbox" name="" id="c1">
+                    <label for="c1">Computer Science</label><br>
+                    <input type="checkbox" name="" id="c2" checked>
+                    <label for="c2">Information Technology</label><br>
+                    <input type="checkbox" name="" id="c3">
+                    <label for="c3">Computer Architecture</label> <br>
+                    <input type="checkbox" name="" id="c4">
+                    <label for="c4">Tele Communication</label>
+                </div>
+
+                <div class="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="password">
+                    <input type="password" name="" id="password" required>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Registered">
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(107, 23, 23);
+    text-decoration: underline;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.form {
+    padding: 15px;
+    background-color: gainsboro;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+    margin: 10px;
+}
+
+.form div:nth-child(even) {
+    grid-column: span 7;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date] {
+    width: 50%;
+    height: 25px;
+}
+
+textarea {
+    width: 50%;
+}
+
+input[type=submit] {
+    background-color: green;
+    color: wheat;
+    font-size: 25px;
+    padding: 7px;
+    border: 1px solid transparent;
+    margin: 5px 10px;
+}
