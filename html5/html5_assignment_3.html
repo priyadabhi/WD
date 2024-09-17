@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        canvas {
+            width: 900px;
+            height: 500px;
+            border: 2px solid rgb(162, 108, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="mycanvas">
+    </canvas>
+
+    <script>
+
+        const canvas = document.getElementById("mycanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#db7f11";
+        ctx.fillRect(10, 10, 60, 60);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(180, 20, 100, 45);
+
+        ctx.arc(120, 40, 25, 0, 2 * Math.PI);
+        ctx.fillStyle = "purple";
+        ctx.fill();
+    </script>
+</body>
+
+</html>
