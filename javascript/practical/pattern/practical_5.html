@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 5</title>
+</head>
+
+<body>
+    <script>
+        let c;
+        //debugger;
+
+        for (let r = 1; r <= 5; r++) {
+            for (c = 6 - 1; c > r; c--) {
+                document.write("\u00A0")
+                // document.write("&nbsp")
+            }
+            for (c = 1; c <= r; c++) {
+                document.write("* ")
+            }
+
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>
