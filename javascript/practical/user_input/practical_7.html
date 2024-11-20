@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 7</title>
+    <style>
+        div {
+            width: 350px;
+            margin: auto;
+        }
+
+        button {
+            margin: 10px 100px;
+            font-size: 15px;
+        }
+
+        input {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Enter any two number to display which number is minimum from them.</p>
+        <label for="fnumber">1st Number:</label>
+        <input type="text" name="fnum" id="fnum"><br>
+        <label for="snumber">2nd Number:</label>
+        <input type="text" name="snum" id="snum"><br>
+        <button id="dis" onclick="minmax()">Display</button><br>
+        <label for="answer" id="answer"></label>
+    </div>
+    <script>
+        function minmax() {
+            var fno = document.getElementById("fnum").value
+            var sno = document.getElementById("snum").value
+            var ans = ""
+            if (fno < sno) {
+                ans += fno + " is minimum"
+            }
+            else if (fno > sno) {
+                ans += sno + " is minimum"
+            }
+            else {
+                ans += "both number are same"
+            }
+            document.getElementById("answer").innerHTML = ans
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 4</title>
+    <style>
+        div {
+            width: 400px;
+            margin: auto;
+        }
+
+        button {
+            margin: 25px 50px;
+            height: 25px;
+            width: 100px;
+        }
+
+        #chkans {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Check input number is odd or even</p>
+        <label for="number">Enter number:</label>
+        <input type="text" name="oddeven" id="oddeven"><br>
+        <button id="btncheck" onclick="oddeven()">Check</button><br>
+        <label for="ans">Anwser is:</label>
+        <label for="chkans" id="chkans"></label>
+    </div>
+    <script>
+        function oddeven() {
+            var num = document.getElementById("oddeven").value
+            var chk = ""
+            if (num % 2 == 0) {
+                chk += "is even number"
+            }
+            else {
+                chk += "is odd number"
+            }
+            document.getElementById("chkans").innerHTML = chk
+        }
+    </script>
+</body>
+
+</html>
