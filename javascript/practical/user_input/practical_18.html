@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 18</title>
+
+    <style>
+        div {
+            width: 350px;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        input,
+        button {
+            padding: 8px;
+        }
+
+        #list {
+            /* width: 300px; */
+            padding: 20px 0px;
+            border: none;
+            font-size: 20px;
+        }
+
+        span {
+            color: white;
+            font-size: 15px;
+            margin-left: 275px;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+            text-align: left;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        li:nth-child(odd) {
+            background-color: rgba(102, 128, 0, 0.663);
+        }
+
+        li:nth-child(even) {
+            background-color: rgba(0, 187, 255, 0.899);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>TODO List</h2>
+        <input type="text" name="" id="todo">
+        <button id="" onclick="return addlist()">ADD LIST</button><br>
+        <div id="list">
+            <!-- <li><span></span></li> -->
+        </div>
+    </div>
+
+
+    <script>
+        function addlist() {
+            let li = document.createElement("li")
+            let input = document.getElementById("todo").value
+            let text = document.createTextNode(input)
+            li.append(text);
+            let mylist = document.getElementById("list")
+            mylist.append(li);
+
+            let span = document.createElement("span")
+            let deltext = document.createTextNode("❌")
+            span.append(deltext)
+            li.append(span)
+
+            document.getElementById("todo").value = ""
+        }
+
+        // function del() {
+        //     let delspan = document.getElementsByTagName(span)
+        //     delspan.remove()
+        // }
+    </script>
+</body>
+
+</html>
