@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main {
+            display: flex;
+            background-color: blue;
+            color: white;
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input {
+            border: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .passdiv {
+            border: 0px solid black;
+            padding: 5px;
+            display: flex;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <label for="password">Enter Password:</label>
+        <div class="passdiv">
+            <input type="password" name="pass" id="pass">
+            <div onclick="change('icon')" role="button"><i class="fa-solid fa-eye" id="icon"></i></div>
+        </div>
+    </div>
+    <script>
+        function change(icon) {
+            let i = document.getElementById(icon)
+            let pass = document.getElementById("pass")
+            if (pass.type == "password") {
+                pass.type = "text"
+                i.classList.remove("fa-eye")
+                i.classList.add("fa-eye-slash")
+            }
+            else {
+                pass.type = "password"
+                i.classList.remove("fa-eye-slash")
+                i.classList.add("fa-eye")
+            }
+        }
+    </script>
+</body>
+
+</html>

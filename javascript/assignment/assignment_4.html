@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .heading {
+            background-color: rgb(37, 36, 36);
+            color: white;
+            padding: 20px;
+            height: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 15px 0 50px 0;
+        }
+
+        .slide {
+            width: 25%;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .control {
+            position: absolute;
+            width: 25%;
+            top: 370px;
+            left: 37%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 40px;
+            color: white;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blueviolet;
+        }
+
+        .aqua {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h2>Simple JavaScript Slider</h2>
+
+        <div class="main">
+            <div class="slide orange">
+
+            </div>
+            <div class="slide green">
+
+            </div>
+            <div class="slide blue">
+
+            </div>
+            <div class="slide red">
+
+            </div>
+            <div class="slide aqua">
+
+            </div>
+            <div class="control">
+                <button onclick="change(-1)">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button onclick="change(1)">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let sliderIndex = 0;
+        slide(sliderIndex)
+
+        function change(x) {
+            slide(sliderIndex += x)
+        }
+
+        function slide(n) {
+            let slide = document.querySelectorAll(".slide")
+            console.log(n)
+            if (n == slide.length) {
+                n = 0
+                sliderIndex = 0
+            }
+            if (n < 0) {
+                n = slide.length - 1
+                sliderIndex = slide.length - 1
+            }
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.scale = 0.9
+            }
+            slide[sliderIndex].style.scale = 1.3
+        }
+    </script>
+</body>
+
+</html>

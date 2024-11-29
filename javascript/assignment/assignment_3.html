@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        #last {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Marksheet for Information Technology</h3>
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;">Enter Marks</td>
+            </tr>
+            <tr>
+                <td>1.C Language</td>
+                <td><input type="text" name="" id="c"></td>
+            </tr>
+            <tr>
+                <td>2.C++ Language</td>
+                <td><input type="text" name="" id="cplus"></td>
+            </tr>
+            <tr>
+                <td>3.Database</td>
+                <td><input type="text" name="" id="db"></td>
+            </tr>
+            <tr>
+                <td>4. HTML</td>
+                <td><input type="text" name="" id="html"></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="text" name="" id="css"></td>
+            </tr>
+            <tr>
+                <td>6. PHP</td>
+                <td><input type="text" name="" id="php"></td>
+            </tr>
+            <tr>
+                <td>7. Core java</td>
+                <td><input type="text" name="" id="cjava"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><button id="result" onclick="result()"> Result</button></td>
+            </tr>
+            <tr id="last">
+                <td>Total is: <label for="" id="total"></label> / 350</td>
+                <td>Percentage is : <label for="" id="percent"></label> % </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function result() {
+            let c = Number(document.getElementById("c").value)
+            let cplus = Number(document.getElementById("cplus").value)
+            let db = Number(document.getElementById("db").value)
+            let html = Number(document.getElementById("html").value)
+            let css = Number(document.getElementById("css").value)
+            let php = Number(document.getElementById("php").value)
+            let cjava = Number(document.getElementById("cjava").value)
+            let total = ""
+            total += `${c + cplus + db + html + css + php + cjava}`;
+            document.getElementById("total").innerHTML = total
+
+            let percent = ""
+            percent += Math.ceil(`${(total / 350) * 100}`);
+            document.getElementById("percent").innerHTML = percent
+        }
+    </script>
+</body>
+
+</html>

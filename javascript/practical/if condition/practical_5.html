@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratical 5</title>
+</head>
+
+<body>
+
+    <script>
+        var p = 20
+        if (p == 1 || p == 0) {
+            document.write(p + " no. is not prime number")
+        }
+        else if (p > 1) {
+            for (i = 2; i < p / 2; i++) {
+                if (p % i == 0) {
+                    // document.write("no. is not prime no.")
+                }
+            }
+            document.write("no. is not prime no.")
+        }
+        else {
+            document.write("no. is prime no.")
+        }
+    </script>
+</body>
+
+</html>

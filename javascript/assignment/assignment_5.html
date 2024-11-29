@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        div,
+        #divcolor {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        input {
+            background-color: lightseagreen;
+            height: 50px;
+            width: 100px;
+            border: none;
+            padding: 26px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="color" name="" id="changebg" onchange="clchange()" role="button">
+    </div>
+    <div id="divcolor">
+    </div>
+    <script>
+        function clchange() {
+            let divcolor = document.getElementById("divcolor")
+            divcolor.style.backgroundColor = event.target.value
+        }
+    </script>
+</body>
+
+</html>

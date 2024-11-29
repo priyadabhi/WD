@@ -76,6 +76,10 @@
             span.append(deltext)
             li.append(span)
 
+            span.addEventListener("click", () => {
+                li.remove()
+            })
+
             document.getElementById("todo").value = ""
         }
 
