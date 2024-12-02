@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 16</title>
+    <style>
+        #ans {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <label for="fnum">1st number: </label>
+                </td>
+                <td>
+                    <input type="text" name="" id="fnum">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="snum">2nd number: </label>
+                </td>
+                <td>
+                    <input type="text" name="" id="snum">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="select">Select operation</label>
+                </td>
+                <td>
+                    <select name="" id="operation">
+                        <option value="select">-----select-------</option>
+                        <option value="add">Addition</option>
+                        <option value="sub">Substraction</option>
+                        <option value="mul">Multiplication</option>
+                        <option value="div">Division</option>
+                        <option value="mod">Modules</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="btnans" onclick="operation()">Answer</button></td>
+            </tr>
+            <tr>
+                <td><label for="">Answer is: </label>
+                    <label for="answer" id="ans"></label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function operation() {
+            let fnum = Number(document.getElementById("fnum").value)
+            let snum = Number(document.getElementById("snum").value)
+            let sel = document.getElementById("operation")
+            let ans = ""
+            if (sel.value == "select") {
+                document.getElementById("ans").innerHTML = "select operation"
+            }
+            else if (sel.value == "add") {
+                ans += `${fnum + snum}`;
+                document.getElementById("ans").innerHTML = ans
+            }
+            else if (sel.value == "sub") {
+                ans += `${fnum - snum}`;
+                document.getElementById("ans").innerHTML = ans
+            }
+            else if (sel.value == "mul") {
+                ans += `${fnum * snum}`;
+                document.getElementById("ans").innerHTML = ans
+            }
+            else if (sel.value == "div") {
+                ans += `${fnum / snum}`;
+                document.getElementById("ans").innerHTML = ans
+            }
+            else if (sel.value == "mod") {
+                ans += `${fnum % snum}`;
+                document.getElementById("ans").innerHTML = ans
+            }
+        }
+    </script>
+</body>
+
+</html>

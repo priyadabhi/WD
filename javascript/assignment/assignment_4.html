@@ -36,6 +36,7 @@
             width: 25%;
             height: 200px;
             background-color: aqua;
+            /* animation: move 1s ease; */
         }
 
         .control {
@@ -56,6 +57,7 @@
 
         .orange {
             background-color: orange;
+            /* animation: move 1s ease; */
         }
 
         .red {
@@ -72,6 +74,24 @@
 
         .aqua {
             background-color: aquamarine;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0px);
+            }
+
+            25% {
+                transform: translateX(50px);
+            }
+
+            50% {
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translateX(150px);
+            }
         }
     </style>
 </head>
@@ -127,7 +147,7 @@
                 sliderIndex = slide.length - 1
             }
             for (let i = 0; i < slide.length; i++) {
-                slide[i].style.scale = 0.9
+                slide[i].style.scale = 0.8
             }
             slide[sliderIndex].style.scale = 1.3
         }
