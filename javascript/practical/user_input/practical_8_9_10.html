@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 8 , 9 and 10</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #main {
+            margin: 30px;
+        }
+
+        label {
+            color: red;
+        }
+
+        #total,
+        #percent,
+        #passfail {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h3>Marksheet for Information Technology</h3>
+        <table>
+            <tr>
+                <td colspan="3" style="text-align: center;">Enter Marks</td>
+            </tr>
+            <tr>
+                <td>1.C Language</td>
+                <td><input type="text" name="" id="c" onkeyup="return checkmark('c','msg1')"></td>
+                <td><label for="marks" id="msg1"></label></td>
+            </tr>
+            <tr>
+                <td>2.C++ Language</td>
+                <td><input type="text" name="" id="cplus" onkeyup="return checkmark('cplus','msg2')"></td>
+                <td><label for="marks" id="msg2"></label></td>
+            </tr>
+            <tr>
+                <td>3.Database</td>
+                <td><input type="text" name="" id="db" onkeyup="return checkmark('db','msg3')"></td>
+                <td><label for="marks" id="msg3"></label></td>
+            </tr>
+            <tr>
+                <td>4. HTML</td>
+                <td><input type="text" name="" id="html" onkeyup="return checkmark('html','msg4')"></td>
+                <td><label for="marks" id="msg4"></label></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="text" name="" id="css" onkeyup="return checkmark('css','msg5')"></td>
+                <td><label for="marks" id="msg5"></label></td>
+            </tr>
+            <tr>
+                <td>6. PHP</td>
+                <td><input type="text" name="" id="php" onkeyup="return checkmark('php','msg6')"></td>
+                <td><label for="marks" id="msg6"></label></td>
+            </tr>
+            <tr>
+                <td>7. Core java</td>
+                <td><input type="text" name="" id="cjava" onkeyup="return checkmark('cjava','msg7')"></td>
+                <td><label for="marks" id="msg7"></label></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;"><button id="result" onclick="result()"> Result</button></td>
+                <td><button id="print" onclick="printpdf()">print</button></td>
+            </tr>
+            <tr>
+                <td>Total is: <label for="" id="total"></label> / 350</td>
+                <td>Percentage is : <label for="" id="percent"></label> % </td>
+                <td>You are : <label for="" id="passfail"></label></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function checkmark(input, msg) {
+            let uinput = Number(document.getElementById(input).value)
+            let res = document.getElementById("result")
+            if (uinput > 50) {
+                document.getElementById(msg).innerHTML = "Invalid marks"
+                res.style.display = "none"
+            }
+            else if (uinput == "") {
+                document.getElementById(msg).innerHTML = "Enter marks"
+                res.style.display = "none"
+            }
+            else if (uinput != null) {
+                document.getElementById(msg).innerHTML = null
+                res.style.display = "block"
+            }
+            return false
+        }
+
+        function result() {
+            let c = Number(document.getElementById("c").value)
+            let cplus = Number(document.getElementById("cplus").value)
+            let db = Number(document.getElementById("db").value)
+            let html = Number(document.getElementById("html").value)
+            let css = Number(document.getElementById("css").value)
+            let php = Number(document.getElementById("php").value)
+            let cjava = Number(document.getElementById("cjava").value)
+
+            let total = ""
+            total += `${c + cplus + db + html + css + php + cjava}`;
+            document.getElementById("total").innerHTML = total
+
+            let percent = ""
+            percent += Math.ceil(`${(total / 350) * 100}`);
+            document.getElementById("percent").innerHTML = percent
+
+            let passfail = ""
+            if (c < 20 || cplus < 20 || db < 20 || html < 20 || css < 20 || php < 20 || cjava < 20) {
+                document.getElementById("passfail").innerHTML = "fail"
+            }
+            else {
+                document.getElementById("passfail").innerHTML = "pass"
+            }
+        }
+
+        function printpdf() {
+            var element = document.getElementById("main");
+            html2pdf(element);
+        }
+    </script>
+</body>
+
+</html>
