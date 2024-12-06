@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        input[type="password"] {
+            border: none;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+        }
+
+        .passdiv {
+            border: 1px solid black;
+            padding: 3px 7px;
+        }
+
+        label {
+            color: rgb(162, 54, 54);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <div class="main">
+            <div class="formdiv">
+                <h3>
+                    Register here
+                </h3>
+                <table>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" name="" id="fname" onkeyup="return check('fname','msgfname')"
+                                maxlength="10"></td>
+                        <td><label for="" id="msgfname"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" name="" id="lname" onkeyup="return check('lname','msglname')"
+                                maxlength="10"></td>
+                        <td><label for="" id="msglname"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="radio" name="gender" id="male">Male
+                            <input type="radio" name="gender" id="female">Female
+                        </td>
+                        <td><label for="" id="msggender"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea name="" id="address" placeholder="Enter character between 35 to 200"
+                                maxlength="200" onkeyup="return addresscheck('address','msgaddress')"></textarea>
+                        </td>
+                        <td>
+                            <label for="" id="msgaddress"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td><select name="" id="city">
+                                <option value="-1">----select-----</option>
+                                <option value="c1">Surat</option>
+                                <option value="c2">Ahmedabad</option>
+                                <option value="c3">Vadodara</option>
+                                <option value="c4">Bharuch</option>
+                            </select></td>
+                        <td><label for="" id="msgcity"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile no.:</td>
+                        <td><input type="text" name="" id="mobile" onkeyup="return mobilecheck('mobile','msgmobile')"
+                                maxlength="10">
+                        </td>
+                        <td><label for="" id="msgmobile"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="" id="email" onkeyup="return emailcheck('email','msgemail')">
+                        </td>
+                        <td><label for="" id="msgemail"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <div class="passdiv">
+                                <input type="password" name="" id="pass"><i id="icon" class="fa-solid fa-eye"
+                                    onclick="return show('pass','icon')" role="button"></i>
+                            </div>
+                        </td>
+                        <td><label for="" id="msgpass"></label></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password:</td>
+                        <td>
+                            <div class="passdiv">
+                                <input type="password" name="" id="cpass"><i class="fa-solid fa-eye"
+                                    onclick="return show('cpass','icon')" role="button"></i>
+                            </div>
+                        </td>
+                        <td><label for="" id="msgcpass"></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="btnsubmit" onclick="return register()">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function check(input, msg) {
+            let uinput = document.getElementById(input).value
+            let ptn = /^([A-Za-z]{5,10})*$/
+            if (uinput == "") {
+                document.getElementById(msg).innerHTML = "Enter name"
+            }
+            else if (!ptn.test(uinput)) {
+                document.getElementById(msg).innerHTML = "Enter Valid name(minimum 5 alphabets)"
+            }
+            else {
+                document.getElementById(msg).innerHTML = null
+            }
+        }
+        function show(input, icon) {
+            let pinput = document.getElementById(input)
+            let i = document.getElementById(icon)
+            if (pinput.type == "password") {
+                pinput.type = "text"
+                i.classList.remove("fa-eye")
+                i.classList.add("fa-eye-slash")
+            }
+            else {
+                pinput.type = "password"
+                i.classList.remove("fa-eye-slash")
+                i.classList.add("fa-eye")
+            }
+        }
+        function mobilecheck(input, msg) {
+            let minput = document.getElementById(input).value
+            let mptn = /^([6-9][0-9]{9})*$/
+            if (minput == "") {
+                document.getElementById(msg).innerHTML = "Enter Mobile number"
+            }
+            else if (!mptn.test(minput)) {
+                document.getElementById(msg).innerHTML = "Enter valid Number"
+            }
+            else {
+                document.getElementById(msg).innerHTML = null
+            }
+        }
+
+        function emailcheck(input, msg) {
+            let minput = document.getElementById(input).value
+            let eptn = /^[a-zA-Z0-9\.]*@[a-zA-Z]*(\.[a-z]{2,3})+$/
+            if (minput == "") {
+                document.getElementById(msg).innerHTML = "Enter Email ID"
+            }
+            else if (!eptn.test(minput)) {
+                document.getElementById(msg).innerHTML = "enter valid email"
+            }
+            else {
+                document.getElementById(msg).innerHTML = null
+            }
+        }
+        function addresscheck(input, msg) {
+            let ainput = document.getElementById(input).value
+            if (ainput == "") {
+                document.getElementById(msg).innerHTML = "please Enter Address"
+            }
+            else if (ainput.length < 5 || ainput.length > 200) {
+                document.getElementById(msg).innerHTML = "Enter valid Address"
+            }
+            else {
+                document.getElementById(msg).innerHTML = null
+            }
+        }
+        function register() {
+
+            let male = document.getElementById("male"),
+                female = document.getElementById("female"),
+                city = document.getElementById("city")
+
+            if (male.checked == false && female.checked == false) {
+                document.getElementById("msggender").innerHTML = "Select Gender"
+            }
+            else if (city.value == "-1") {
+                document.getElementById("msggender").innerHTML = null
+                document.getElementById("msgcity").innerHTML = "select city"
+            }
+            else {
+                document.getElementById("msggender").innerHTML = null
+                document.getElementById("msgcity").innerHTML = null
+            }
+            return false
+            city.value = ""
+        }
+
+    </script>
+</body>
+
+</html>

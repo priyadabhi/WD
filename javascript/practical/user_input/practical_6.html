@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        #menubar {
+            background-color: rgb(214, 94, 208);
+            color: rgb(53, 7, 95);
+            display: flex;
+            padding: 20px 100px;
+            align-items: center;
+            position: fixed;
+        }
+
+        .icon {
+            font-size: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 100px;
+            flex-grow: 2;
+            justify-content: flex-end;
+        }
+
+        button {
+            border: 1px solid;
+            background-color: transparent;
+            padding: 25%;
+            font-size: 20px;
+            border-radius: 10%;
+            display: none;
+            margin-right: 20px;
+        }
+
+        .changemenu {
+            display: none;
+        }
+
+        .changemenu a {
+            color: beige;
+        }
+
+        .image {
+            width: 1000px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .change {
+            background-color: black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width:578px) {
+            button {
+                display: block;
+            }
+
+            .navbtn {
+                display: flex;
+                margin-left: 69%;
+                margin-right: 10%;
+            }
+
+            .menu {
+                padding: 10px 50px;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="menu" id="menubar">
+            <div class="icon">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="nav">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="">Help</a>
+            </div>
+            <div class="navbtn">
+                <button onclick="togglechange()"><i class="fa-solid fa-bars" id="icon"></i></button>
+            </div>
+        </div>
+        <div class="changemenu" id="changemenu">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Help</a>
+        </div>
+        <div class="image">
+            <img src="https://i.pinimg.com/736x/58/bd/4f/58bd4fc9ebfccc1f2de419529bbf1a12.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < 500) {
+                document.getElementById("menubar").style.backgroundColor = ""
+            }
+            else if (window.scrollY > 500 && window.scrollY < 1000) {
+                document.getElementById("menubar").style.backgroundColor = "blue"
+            }
+            else if (window.scrollY > 1000 && window.scrollY < 1500) {
+                document.getElementById("menubar").style.backgroundColor = "green"
+            }
+            else {
+                document.getElementById("menubar").style.backgroundColor = "black"
+            }
+        })
+        function togglechange() {
+
+            let change = document.getElementById("changemenu")
+            let ic = document.getElementById("icon")
+            change.classList.toggle("change")
+            ic.classList.toggle("fa-close")
+        }
+
+
+    </script>
+</body>
+
+</html>

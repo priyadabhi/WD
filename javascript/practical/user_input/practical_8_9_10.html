@@ -83,17 +83,21 @@
         function checkmark(input, msg) {
             let uinput = Number(document.getElementById(input).value)
             let res = document.getElementById("result")
+            let prt = document.getElementById("print")
             if (uinput > 50) {
                 document.getElementById(msg).innerHTML = "Invalid marks"
                 res.style.display = "none"
+                prt.style.display = "none"
             }
             else if (uinput == "") {
                 document.getElementById(msg).innerHTML = "Enter marks"
                 res.style.display = "none"
+                prt.style.display = "none"
             }
             else if (uinput != null) {
                 document.getElementById(msg).innerHTML = null
                 res.style.display = "block"
+                prt.style.display = "block"
             }
             return false
         }
