@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel booking</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .contain {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>Resturant Booking</h3>
+        <div class="contain">
+            <div id="choice">
+                <span>Choice Of Booking</span>
+                <select name="" id="schoice" onchange="fchoice()">
+                    <option value="select">---Select-----</option>
+                    <option value="full">Full Day Booking</option>
+                    <option value="half">Half Day Booking</option>
+                    <option value="hour">Hourly Booking</option>
+                </select>
+            </div>
+            <div id="uname">
+                <span>Username:</span>
+                <input type="text" name="" id="tuname" placeholder="Enter Username">
+            </div>
+            <div id="mobile">
+                <span>Mobile no.:</span>
+                <input type="text" name="" id="tmobile" placeholder="Enter Mobile no">
+            </div>
+            <div id="email">
+                <span>Email ID:</span>
+                <input type="text" name="" id="temail" placeholder="Enter Email ID">
+            </div>
+            <div id="person">
+                <span>No Of Person:</span>
+                <input type="text" name="" id="tperson" placeholder="Enter no of Person">
+            </div>
+            <div id="date">
+            </div>
+            <div id="time">
+            </div>
+            <div id="slot">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function fchoice() {
+            var choice = document.getElementById("schoice")
+            // let ddate = ""
+            let ddate = document.getElementById("date")
+            let dtime = document.getElementById("time")
+            let dslot = document.getElementById("slot")
+
+            if (choice.value == "full") {
+                // ddate.remove()
+                // ddate = document.getElementById("date")
+                let date = document.createElement("span")
+                let sdate = document.createTextNode("Date:")
+                date.append(sdate)
+                ddate.append(date)
+
+                let tdate = document.createElement("input")
+                tdate.setAttribute("type", "date")
+                ddate.append(tdate)
+            }
+
+            else if (choice.value == "hour") {
+                // let ddate = document.getElementById("date")
+                let date = document.createElement("span")
+                let sdate = document.createTextNode("Date:")
+                date.append(sdate)
+                ddate.append(date)
+
+                //  input type=date create element
+                let tdate = document.createElement("input")
+                tdate.setAttribute("type", "date")
+                ddate.append(tdate)
+
+                // for time
+                let time = document.createElement("span")
+                let stime = document.createTextNode("Time:")
+                time.append(stime)
+                dtime.append(time)
+
+                // input type=time create element
+                let ttime = document.createElement("input")
+                ttime.setAttribute("type", "time")
+                dtime.append(ttime)
+            }
+            else if (choice.value == "half") {
+                let slot = document.createElement("span")
+                let sslot = document.createTextNode("Slot:")
+                slot.append(sslot)
+                dslot.append(slot)
+
+                // input type=radio create element
+                let tbslot = document.createElement("input")
+                tbslot.setAttribute("type", "radio")
+                // let breakfast = document.createTextNode("breakfast")
+                // tbslot.append(breakfast)
+                dslot.append(tbslot)
+
+                let tlslot = document.createElement("input")
+                tlslot.setAttribute("type", "radio")
+                // let launch = document.createTextNode("launch")
+                // tlslot.append(launch)
+                dslot.append(tlslot)
+
+                let tdslot = document.createElement("input")
+                tdslot.setAttribute("type", "radio")
+                dslot.append(tdslot)
+            }
+        }
+    </script>
+</body>
+
+</html>

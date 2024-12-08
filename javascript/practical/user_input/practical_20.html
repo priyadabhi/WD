@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 20</title>
+    <style>
+        .main {
+            padding: 30px;
+            border: 1px solid black;
+            width: 30%;
+            text-align: center;
+        }
+
+        .date {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            gap: 10px 20px;
+            justify-items: center
+        }
+
+        #btndisplay,
+        p {
+            grid-column: span 2;
+            text-align: center;
+        }
+
+        button {
+            width: 25%;
+        }
+
+        #dday,
+        #dmonth,
+        #dyear {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="displaydate">
+            <h2>
+                Display difference of day, month and year of given 2 dates.
+            </h2>
+            <hr>
+            <div class="date">
+                <label for="sdate">Enter Start Date</label>
+                <input type="date" name="" id="sdate" pattern="">
+                <label for="edate">Enter End Date</label>
+                <input type="date" name="" id="edate">
+                <button id="btndisplay" onclick="displaydate()">Display</button>
+                <p>Day is:<label for="" id="dday"></label></p>
+                <p>Month is:<label for="" id="dmonth"></label></p>
+                <p>Year is:<label for="" id="dyear"></label></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displaydate() {
+            var sdate = document.getElementById("sdate").value
+            var start = new Date(sdate)
+            var edate = document.getElementById("edate").value
+            var end = new Date(edate)
+            var days = end.getTime() - start.getTime()
+            var day = days / (1000 * 60 * 60 * 24)
+            document.getElementById("dday").innerHTML = day
+
+            var month = Math.floor(day / 30.25)
+            document.getElementById("dmonth").innerHTML = month
+
+            var year = Math.round(day / 365.25)
+            document.getElementById("dyear").innerHTML = year
+        }
+    </script>
+</body>
+
+</html>

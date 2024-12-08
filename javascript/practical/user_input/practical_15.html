@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 15</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            position: relative;
+            width: 800px;
+        }
+
+        .menudiv {
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .icon {
+            padding: 10px 50px;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            position: absolute;
+            top: 0;
+            padding: 40px 20px;
+            background-color: aqua;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .fa-close {
+            z-index: 2;
+            top: 0;
+            position: absolute;
+            right: -40px;
+            background-color: antiquewhite;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://jooinn.com/images/lonely-tree-reflection-3.jpg" alt="">
+        <div class="menudiv">
+            <div class="icon" onclick="changeTheme('icon')" role="button">
+                <i class="fa-solid fa-bars" id="icon"></i>
+            </div>
+            <div class="nav" id="nav">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Contact</a>
+                <a href="">Service</a>
+                <a href="">Pages</a>
+                <a href="">Registration</a>
+                <a href="">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeTheme(icon) {
+            let i = document.getElementById(icon)
+            let menu = document.getElementById("nav")
+            menu.classList.toggle("menu")
+
+            if (menu.classList.contains("menu")) {
+                i.classList.add("fa-close")
+            } else {
+                i.classList.remove("fa-close")
+                i.classList.add("fa-bar")
+            }
+        }
+    </script>
+</body>
+
+</html>

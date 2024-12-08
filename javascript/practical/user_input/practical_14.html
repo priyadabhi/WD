@@ -4,13 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical 14</title>
+    <title>practical 14</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 1000px;
+            background-color: black;
+        }
+
+        .count {
+            width: 100%;
+            display: flex;
+            position: sticky;
+            top: 50px;
+            height: 150px;
+            background-color: gray;
+            color: white;
+            font-size: 40px;
+            align-items: center;
+        }
+
+        .count div {
+            width: 25%;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="page">
+    <div class="main">
+        <div class="count" id="number">
+            <div id="first">
 
+            </div>
+            <div id="second">
+
+            </div>
+            <div id="third"></div>
+            <div id="fourth"></div>
+        </div>
     </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            var first = document.getElementById("first")
+            var fs = 600;
+            var fsc = setInterval(() => {
+                first.innerHTML = ++fs;
+                if (fs == 910) {
+                    clearInterval(fsc)
+                }
+            }, 5);
+
+            var second = document.getElementById("second")
+            var ss = 1000;
+            var ssc = setInterval(() => {
+                second.innerHTML = ++ss;
+                if (ss == 1399) {
+                    clearInterval(ssc)
+                }
+            }, 5);
+
+            var third = document.getElementById("third")
+            var ts = 1500;
+            var tsc = setInterval(() => {
+                third.innerHTML = ++ts;
+                if (ts == 1777) {
+                    clearInterval(tsc)
+                }
+            }, 5);
+
+            var fourth = document.getElementById("fourth")
+            var fos = 2000;
+            var fosc = setInterval(() => {
+                fourth.innerHTML = ++fos;
+                if (fos == 2254) {
+                    clearInterval(fosc)
+                }
+            }, 5);
+        })
+    </script>
 </body>
 
 </html>
