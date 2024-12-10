@@ -61,14 +61,15 @@
     <script>
         function fchoice() {
             var choice = document.getElementById("schoice")
-            // let ddate = ""
             let ddate = document.getElementById("date")
             let dtime = document.getElementById("time")
             let dslot = document.getElementById("slot")
 
             if (choice.value == "full") {
-                // ddate.remove()
                 // ddate = document.getElementById("date")
+                ddate.style.display = "block"
+                dtime.style.display = "none"
+                dslot.style.display = "none"
                 let date = document.createElement("span")
                 let sdate = document.createTextNode("Date:")
                 date.append(sdate)
@@ -81,15 +82,20 @@
 
             else if (choice.value == "hour") {
                 // let ddate = document.getElementById("date")
+                // let dslot = document.getElementById("slot")
+                ddate.style.display = "none"
+                dslot.style.display = "none"
+                // let dtime = document.getElementById("time")
+                dtime.style.display = "block"
                 let date = document.createElement("span")
                 let sdate = document.createTextNode("Date:")
                 date.append(sdate)
-                ddate.append(date)
+                dtime.append(date)
 
                 //  input type=date create element
                 let tdate = document.createElement("input")
                 tdate.setAttribute("type", "date")
-                ddate.append(tdate)
+                dtime.append(tdate)
 
                 // for time
                 let time = document.createElement("span")
@@ -103,6 +109,21 @@
                 dtime.append(ttime)
             }
             else if (choice.value == "half") {
+                // let dtime = document.getElementById("time")
+                // let dslot = document.getElementById("slot")
+                dslot.style.display = "block"
+                ddate.style.display = "none"
+                dtime.style.display = "none"
+
+                let date = document.createElement("span")
+                let sdate = document.createTextNode("Date:")
+                date.append(sdate)
+                dslot.append(date)
+
+                let tdate = document.createElement("input")
+                tdate.setAttribute("type", "date")
+                dslot.append(tdate)
+
                 let slot = document.createElement("span")
                 let sslot = document.createTextNode("Slot:")
                 slot.append(sslot)
@@ -111,19 +132,27 @@
                 // input type=radio create element
                 let tbslot = document.createElement("input")
                 tbslot.setAttribute("type", "radio")
-                // let breakfast = document.createTextNode("breakfast")
-                // tbslot.append(breakfast)
+                let blabel = document.createElement("label")
+                let breakfast = document.createTextNode("breakfast")
+                blabel.append(breakfast)
                 dslot.append(tbslot)
+                dslot.append(blabel)
 
                 let tlslot = document.createElement("input")
                 tlslot.setAttribute("type", "radio")
-                // let launch = document.createTextNode("launch")
-                // tlslot.append(launch)
+                let llabel = document.createElement("label")
+                let launch = document.createTextNode("launch")
+                llabel.append(launch)
                 dslot.append(tlslot)
+                dslot.append(llabel)
 
                 let tdslot = document.createElement("input")
                 tdslot.setAttribute("type", "radio")
+                let dlabel = document.createElement("label")
+                let dinner = document.createTextNode("Dinner")
+                dlabel.append(dinner)
                 dslot.append(tdslot)
+                dslot.append(dlabel)
             }
         }
     </script>
