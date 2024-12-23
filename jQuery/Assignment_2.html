@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 75%;
+            height: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .slidediv {
+            width: 90%;
+            height: 300px;
+            margin: auto;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .slidediv,
+        button {
+            background-color: yellow;
+        }
+
+        h2 {
+            padding: 120px;
+        }
+
+        button {
+            margin-top: 100px;
+            width: 10%;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <div class="main">
+        <div class="slidediv">
+            <h2>SlideUp / SlideDown / SlideToggle</h2>
+        </div>
+        <button id="slideup">SlideUp</button>
+        <button id="slidedown">SlideDown</button>
+        <button id="slidetoggle">SlideToggle</button>
+    </div>
+
+    <script>
+        $(function () {
+            $("#slideup").click(function () {
+                $(".slidediv").slideUp(1000)
+            })
+
+            $("#slidedown").click(function () {
+                $(".slidediv").slideDown(1000)
+            })
+
+            $("#slidetoggle").click(function () {
+                $(".slidediv").slideToggle(1000)
+            })
+        })
+    </script>
+</body>
+
+</html>
