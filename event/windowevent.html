@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Event</title>
+
+    <style>
+        .main {
+            width: 50%;
+            margin: 20px auto;
+            padding: 50px;
+            background-color: darkmagenta;
+            text-align: center;
+        }
+
+        .main div {
+            border: 1px solid black;
+            width: 70%;
+            margin: auto;
+            height: 200px;
+            overflow: scroll;
+            background-color: blueviolet;
+            font-size: 18px;
+            color: blanchedalmond;
+            letter-spacing: 1.8px;
+            padding: 20px 30px;
+        }
+
+        p {
+            margin: 10px auto;
+            color: blanchedalmond;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body onload="pload()" onunload="punload()" onresize="presize()">
+    <div class="main">
+        <p id="resizep">Resize</p>
+        <p id="scrollp">0
+        </p>
+        <div id="dscroll" onscroll="pscroll()">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni quam eius at perspiciatis. Earum
+            laboriosam fuga fugit, necessitatibus quisquam perspiciatis ullam deleniti reprehenderit error quod
+            soluta, hic architecto cumque qui. <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sunt expedita consequatur praesentium,
+            hic velit officiis voluptate perferendis iste esse suscipit iure molestiae debitis maiores nisi, omnis,
+            inventore nostrum dolorem! <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste reprehenderit sequi enim, explicabo
+            minima error sint eveniet accusantium repellat exercitationem, excepturi aliquid adipisci, iure maxime
+            dolor! Dignissimos labore esse reiciendis!
+        </div>
+    </div>
+</body>
+<script>
+    function pload() {
+        alert("Page loaded Successfully")
+    }
+
+    function punload() {
+        alert("Page Unloaded Successfully")
+    }
+    let x = 0
+    function pscroll() {
+        document.getElementById("scrollp").innerHTML = x += 1
+    }
+
+    function presize() {
+        let w = window.innerWidth
+        let h = window.innerHeight
+        let txt = "Window Width: " + w + " , Height: " + h
+        document.getElementById("resizep").innerHTML = txt
+    }
+</script>
+
+</html>

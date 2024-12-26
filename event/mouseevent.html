@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        .main {
+            margin: auto;
+            width: 90%;
+            display: grid;
+            padding: 50px;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: cadetblue;
+        }
+
+        .main div {
+            width: 90%;
+            height: 100px;
+            text-align: center;
+            padding-top: 50px;
+            font: 25px bold;
+            border: 1px solid black;
+            background-color: blanchedalmond;
+        }
+
+        #mousemove div {
+            width: 50px;
+            margin: auto;
+            height: 1px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="click" onclick="singleclick()">Click</div>
+        <div id="dblclick" ondblclick="doubleclick()">Double Click</div>
+        <div id="rightclick" oncontextmenu="return false">Right Click</div>
+        <div id="mouseover" onmouseover="over()" onmouseout="out()">Mouse Over/Out</div>
+        <div id="mouseenter" onmouseenter="enter()" onmouseleave="leave()">Mouse Enter/Leave</div>
+        <div id="mouseup" onmouseup="up()" onmousedown="down()">Mouse Up/Down</div>
+        <div id="mousewheel" onmousewheel="wheel()" onclick="wheelleave()">Mouse wheel</div>
+        <div id="mousemove" onmousemove="move(event)">move
+            <div id="mo"></div>
+            <p id="te"></p>
+        </div>
+
+    </div>
+
+    <script>
+        function singleclick() {
+            let d = document.getElementById("click")
+            d.style.userSelect = "none"
+
+            if (d.style.color == "lime") {
+                d.style.backgroundColor = "gray"
+                d.style.color = "white"
+            }
+            else {
+                d.style.backgroundColor = "maroon"
+                d.style.color = "lime"
+            }
+        }
+
+        function doubleclick() {
+            let d = document.getElementById("dblclick")
+            d.style.userSelect = "none"
+
+            if (d.style.color == "maroon") {
+                d.style.backgroundColor = "gray"
+                d.style.color = "white"
+            }
+            else {
+                d.style.backgroundColor = "green"
+                d.style.color = "maroon"
+            }
+        }
+
+        function over() {
+            let o = document.getElementById("mouseover")
+            o.style.scale = "1.2"
+        }
+
+        function out() {
+            let o = document.getElementById("mouseover")
+            o.style.scale = "1.0"
+        }
+
+        function enter() {
+            let e = document.getElementById("mouseenter")
+            e.style.background = "pink"
+        }
+
+        function leave() {
+            let e = document.getElementById("mouseenter")
+            e.style.background = "blanchedalmond"
+        }
+
+        function up() {
+            let u = document.getElementById("mouseup")
+            u.style.scale = "1"
+        }
+
+        function down() {
+            let u = document.getElementById("mouseup")
+            u.style.scale = "0.8"
+        }
+
+        function wheel() {
+            let m = document.getElementById("mousewheel")
+            m.style.backgroundColor = "white"
+        }
+
+        function wheelleave() {
+            let m = document.getElementById("mousewheel")
+            m.style.backgroundColor = "blanchedalmond"
+        }
+
+        function move(e) {
+            let mo = document.getElementById("mo")
+            let x = e.clientX
+            let y = e.clientY
+
+            let coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("te").innerHTML = coor;
+
+            // mo.style.translate = (x / 50) + "0px"
+            // mo.style.translate = (y / 15) + "5px"
+        }
+    </script>
+</body>
+
+</html>

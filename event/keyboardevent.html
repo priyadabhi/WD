@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <style>
+        .main {
+            width: 40%;
+            margin: 50px auto;
+            padding: 50px;
+            border: 1px solid black;
+            background-color: coral;
+
+        }
+
+        .main div input {
+            width: 75%;
+            margin: 10px auto;
+            background-color: aquamarine;
+            height: 30px;
+            box-shadow: 2px 2px 2px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="keyup">
+            <input type="text" name="" id="keyboard" onkeyup="keyup()" placeholder="Effect After Release Key">
+        </div>
+
+        <div class="keydown">
+            <input type="text" name="" id="" onkeydown="keydown()"
+                placeholder="Effect on Press Any Key for Enter and Remove value">
+        </div>
+
+        <div class="keypress">
+            <input type="text" name="" id="" onkeypress="keypress()" placeholder="Effect on only Any key Enter">
+        </div>
+    </div>
+
+    <script>
+        let text = document.getElementById("keyboard")
+
+        function keyup() {
+            text.value = text.value.toUpperCase()
+        }
+
+        function keydown() {
+            alert("key down")
+        }
+
+        function keypress() {
+            alert("key press")
+        }
+    </script>
+</body>
+
+</html>
