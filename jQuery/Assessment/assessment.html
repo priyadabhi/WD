@@ -55,6 +55,7 @@
 </head>
 
 <body>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <div class="main">
@@ -70,6 +71,7 @@
     </div>
 
     <script>
+
         $(function () {
             $("#btnadd").click(function () {
                 let title = $("#title").val()
@@ -87,8 +89,8 @@
                         <div>
                             <h3>Item 1</h3>
                             ${title}<br>
-                            <img src="${image}"><br>
-                            <button id="delete">Remove</button>
+                            <img src=\'D:/priya/website_designing/jQuery/Assessment/images'+${image}><br>
+                            <button class="delete">Remove</button>
                         </div>
                         `)
                         $("#title").val('')
@@ -97,7 +99,7 @@
                         alert("Not add")
                     }
                 }
-                $("#delete").click(function () {
+                $(".delete").click(function () {
                     $(this).parent().remove()
                 })
             })
