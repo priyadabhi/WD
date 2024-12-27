@@ -26,6 +26,10 @@
             background-color: blanchedalmond;
         }
 
+        #mouseover {
+            transition: 1s ease-in-out;
+        }
+
         #mousemove div {
             width: fit-content;
             margin: auto;
@@ -42,11 +46,11 @@
         <div id="click" onclick="singleclick()">Click</div>
         <div id="dblclick" ondblclick="doubleclick()">Double Click</div>
         <div id="rightclick" oncontextmenu="return false">Right Click</div>
-        <div id="mouseover" onmouseover="over()" onmouseout="out()">Mouse Over/Out</div>
-        <div id="mouseenter" onmouseenter="enter()" onmouseleave="leave()">Mouse Enter/Leave</div>
-        <div id="mouseup" onmouseup="up()" onmousedown="down()">Mouse Up/Down</div>
+        <div id="mouseover">Mouse Over/Out</div>
+        <div id="mouseenter">Mouse Enter/Leave</div>
+        <div id="mouseup">Mouse Up/Down</div>
         <div id="mousewheel" onmousewheel="wheel()" onclick="wheelleave()">Mouse wheel</div>
-        <div id="mousemove" onmousemove="move()">move
+        <div id="mousemove">move
             <div id="mo">0
             </div>
         </div>
@@ -82,34 +86,31 @@
             }
         }
 
-        function over() {
-            let o = document.getElementById("mouseover")
-            o.style.scale = "1.2"
-        }
+        let mouseover = document.getElementById("mouseover")
+        mouseover.addEventListener('mouseover', function () {
+            mouseover.style.scale = "1.2"
+        })
 
-        function out() {
-            let o = document.getElementById("mouseover")
-            o.style.scale = "1.0"
-        }
+        mouseover.addEventListener('mouseout', function () {
+            mouseover.style.scale = "1.0"
+        })
 
-        function enter() {
-            let e = document.getElementById("mouseenter")
+        let e = document.getElementById("mouseenter")
+        e.addEventListener('mouseenter', function () {
             e.style.background = "pink"
-        }
+        })
 
-        function leave() {
-            let e = document.getElementById("mouseenter")
+        e.addEventListener('mouseleave', function () {
             e.style.background = "blanchedalmond"
+        })
+
+        let moveup = document.getElementById("mouseup")
+        moveup.onmouseup = function () {
+            moveup.style.scale = "1"
         }
 
-        function up() {
-            let u = document.getElementById("mouseup")
-            u.style.scale = "1"
-        }
-
-        function down() {
-            let u = document.getElementById("mouseup")
-            u.style.scale = "0.8"
+        moveup.onmousedown = function () {
+            moveup.style.scale = "0.8"
         }
 
         function wheel() {
@@ -121,10 +122,12 @@
             let m = document.getElementById("mousewheel")
             m.style.backgroundColor = "blanchedalmond"
         }
+
         let x = 0
-        function move() {
+        let move = document.getElementById("mousemove")
+        move.addEventListener('mousemove', function () {
             document.getElementById("mo").innerHTML = x += 1;
-        }
+        })
     </script>
 </body>
 
