@@ -37,12 +37,12 @@
 
 <body>
     <div class="main">
+
         <form action="formevent.html" onsubmit="fsubmit()" onreset="freset()">
             <h2>Form Event</h2><br>
-            <input type="text" name="" id="iblur" onblur="fblur()" onchange="fchange()"
-                placeholder="Effect After Leave The Input Field"><br>
+            <input type="text" name="" id="iblur" onblur="fblur()" placeholder="Effect After Leave The Input Field"><br>
 
-            <input type="text" name="" id="ifocus" onfocus="ffocus()" placeholder="For Focus"><br>
+            <input type="text" name="" id="ifocus" onfocus="ffocus()" onchange="fchange()" placeholder="For Focus"><br>
 
             <p id="schange"></p>
 
@@ -50,22 +50,24 @@
 
             <input type="reset" value="Reset">
         </form>
+
     </div>
 </body>
 <script>
     let b = document.getElementById("iblur")
-    function fblur() {
+    let f = document.getElementById("ifocus")
 
+    function fblur() {
         b.value = b.value.toUpperCase()
     }
 
     function ffocus() {
-        let f = document.getElementById("ifocus")
+
         f.style.border = "10px double beige"
     }
 
     function fchange() {
-        document.getElementById("schange").innerHTML = b.value.toUpperCase()
+        document.getElementById("schange").innerHTML = f.value
     }
 
     function fsubmit() {

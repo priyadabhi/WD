@@ -8,17 +8,17 @@
     <style>
         .main {
             margin: auto;
-            width: 90%;
+            width: 40%;
             display: grid;
             padding: 50px;
             gap: 20px;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             background-color: cadetblue;
         }
 
         .main div {
-            width: 90%;
-            height: 100px;
+            width: 80%;
+            height: 80px;
             text-align: center;
             padding-top: 50px;
             font: 25px bold;
@@ -43,16 +43,23 @@
 
 <body>
     <div class="main">
+
         <div id="click" onclick="singleclick()">Click</div>
+
         <div id="dblclick" ondblclick="doubleclick()">Double Click</div>
+
         <div id="rightclick" oncontextmenu="return false">Right Click</div>
+
         <div id="mouseover">Mouse Over/Out</div>
+
         <div id="mouseenter">Mouse Enter/Leave</div>
+
         <div id="mouseup">Mouse Up/Down</div>
+
         <div id="mousewheel" onmousewheel="wheel()" onclick="wheelleave()">Mouse wheel</div>
+
         <div id="mousemove">move
-            <div id="mo">0
-            </div>
+            <div id="mo">0</div>
         </div>
 
     </div>
@@ -128,6 +135,7 @@
         move.addEventListener('mousemove', function () {
             document.getElementById("mo").innerHTML = x += 1;
         })
+
     </script>
 </body>
 
