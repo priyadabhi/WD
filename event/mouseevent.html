@@ -27,10 +27,12 @@
         }
 
         #mousemove div {
-            width: 50px;
+            width: fit-content;
             margin: auto;
-            height: 1px;
+            padding: 5px;
+            height: fit-content;
             background-color: black;
+            color: bisque;
         }
     </style>
 </head>
@@ -44,9 +46,9 @@
         <div id="mouseenter" onmouseenter="enter()" onmouseleave="leave()">Mouse Enter/Leave</div>
         <div id="mouseup" onmouseup="up()" onmousedown="down()">Mouse Up/Down</div>
         <div id="mousewheel" onmousewheel="wheel()" onclick="wheelleave()">Mouse wheel</div>
-        <div id="mousemove" onmousemove="move(event)">move
-            <div id="mo"></div>
-            <p id="te"></p>
+        <div id="mousemove" onmousemove="move()">move
+            <div id="mo">0
+            </div>
         </div>
 
     </div>
@@ -119,17 +121,9 @@
             let m = document.getElementById("mousewheel")
             m.style.backgroundColor = "blanchedalmond"
         }
-
-        function move(e) {
-            let mo = document.getElementById("mo")
-            let x = e.clientX
-            let y = e.clientY
-
-            let coor = "Coordinates: (" + x + "," + y + ")";
-            document.getElementById("te").innerHTML = coor;
-
-            // mo.style.translate = (x / 50) + "0px"
-            // mo.style.translate = (y / 15) + "5px"
+        let x = 0
+        function move() {
+            document.getElementById("mo").innerHTML = x += 1;
         }
     </script>
 </body>
