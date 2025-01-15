@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap");
+
+.main {
+    font-family: Sofadi One;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.navbar {
+    background-color: #451813;
+}
+
+.yellow {
+    background-color: #88760c;
+}
+
+.shadow1 {
+    box-shadow: #451813 0px 0px 20px 15px;
+}
+
+.text-shadow {
+    text-shadow: 0 0 7px #eede2d;
+}
+
+.textdanger {
+    color: #451813;
+}
+
+.bgdanger {
+    background-color: #451813;
+}
+
+.designshadow {
+    box-shadow: gray 0px 0px 10px 5px;
+}
+
+.serviceshadow {
+    box-shadow: rgb(107, 107, 107) 0px 0px 10px 10px;
+}
