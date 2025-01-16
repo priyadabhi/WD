@@ -40,6 +40,10 @@
     box-shadow: gray 0px 0px 10px 5px;
 }
 
+.navsize {
+    font-size: 10px;
+}
+
 .serviceshadow {
     box-shadow: rgb(107, 107, 107) 0px 0px 10px 10px;
 }
