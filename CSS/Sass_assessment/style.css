@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.main {
+  padding: 60px;
+  background-color: black;
+  text-transform: capitalize;
+  text-align: center;
+}
+.main .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(41, 1, 41);
+  color: wheat;
+  height: 640px;
+  overflow: hidden;
+}
+.main .container .heading {
+  color: rgb(13, 139, 161);
+  padding-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.main .container .heading .logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0px 0px 10px 5px white;
+}
+.main .container .heading .logo h1 {
+  color: aquamarine;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transform: rotate(45deg);
+  font-weight: 300;
+  font-size: 45px;
+}
+.main .container .heading h3 {
+  margin-bottom: 30px;
+}
+.main .container .heading a {
+  text-decoration: none;
+  color: wheat;
+  border: 1px solid aquamarine;
+  box-shadow: 0px 0px 8px 5px aquamarine;
+  padding: 10px;
+  margin-left: 40px;
+}
+.main .container .paragraph {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.main .container .paragraph .card {
+  background: rgb(13, 139, 161);
+  padding: 30px;
+  transform: skewY(15deg);
+  box-shadow: 0px 0px 12px 10px rgb(95, 26, 79);
+  font-family: "ubuntu";
+  color: black;
+  width: 17%;
+}
+.main .container .paragraph .card p {
+  transform: skewY(-15deg);
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
