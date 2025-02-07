@@ -43,9 +43,10 @@ $black: #000000;
 }
 
 @mixin responsivepadding {
-    padding-top: $p-7;
+    padding-top: $p-6;
     padding-left: $p-1;
     padding-right: $p-1;
+    padding-bottom: $p-5;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -77,7 +78,7 @@ $black: #000000;
 
 
             @media (max-width:576px) {
-                transform: scale(1);
+                display: block;
             }
 
             @media (min-width:992px) {
@@ -93,6 +94,23 @@ $black: #000000;
                 text-decoration: none;
                 font-size: $f-2;
                 color: $peach;
+                padding-bottom: $p-1;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    transition: 0.5s ease-in-out;
+                    background-color: $peach;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
             }
 
             @media (max-width:576px) {
@@ -167,7 +185,7 @@ $black: #000000;
                 width: 70%;
 
                 .name {
-                    font-size: $f-5;
+                    font-size: $f-4;
                 }
             }
 
@@ -189,33 +207,41 @@ $black: #000000;
         }
 
         @media (min-width:768px) {
-            //@include responsivepadding();
             padding: $p-6;
             flex-direction: row;
             text-align: left;
         }
 
-        // @media (min-width:992px) {
-        //     padding: $p-6;
-        //     flex-direction: row;
-        //     text-align: left;
-        // }
     }
 
     .about {
         text-transform: capitalize;
         color: $yellow;
-        padding: $p-6;
 
         .img {
             width: 100%;
             text-align: center;
 
             img {
-                width: 10%;
                 filter: opacity(0.6);
                 border-radius: 70%;
                 box-shadow: inset 0px 0px 20px 15px $yellow;
+
+                @media (max-width:576px) {
+                    width: 25%;
+                }
+
+                @media (min-width:576px) {
+                    width: 25%;
+                }
+
+                @media (min-width:768px) {
+                    width: 25%;
+                }
+
+                @media (min-width:992px) {
+                    width: 10%;
+                }
             }
         }
 
@@ -227,23 +253,56 @@ $black: #000000;
         }
 
         .aboutme {
-            width: 50%;
-            font-size: $f-3;
             color: $peach;
             margin: auto;
             text-align: center;
         }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 100%;
+                font-size: $f-2;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 100%;
+                font-size: $f-3;
+            }
+
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 75%;
+                // font-size: $f-3;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            .aboutme {
+                width: 75%;
+                // font-size: $f-3;
+            }
+        }
     }
 
     .skills {
-        padding: $p-6;
 
         h2 {
             @include h2();
         }
 
         p {
-            width: 70%;
             text-transform: capitalize;
             font-size: $f-3;
             color: $peach;
@@ -260,6 +319,30 @@ $black: #000000;
                 margin: $m-1;
             }
         }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            p {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            p {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            p {
+                width: 70%;
+            }
+        }
     }
 
     .education {
@@ -272,7 +355,6 @@ $black: #000000;
 
         .study {
             display: flex;
-            gap: $p-5;
             color: $peach;
             text-transform: capitalize;
             font-size: $f-3;
@@ -282,18 +364,48 @@ $black: #000000;
 
             div {
                 border: 1px solid $peach;
-                padding: $p-3;
                 box-shadow: 0px 0px 5px 5px $brown;
 
                 li {
                     list-style: none;
                 }
             }
+
+            @media (max-width:576px) {
+                flex-direction: column;
+                gap: $p-2;
+
+                div {
+                    padding: $p-1;
+                }
+            }
+
+            @media (min-width:576px) {
+                flex-direction: column;
+                gap: $p-2;
+
+                div {
+                    padding: $p-1;
+                }
+            }
+
+            @media (min-width:768px) {
+                flex-direction: row;
+                gap: $p-5;
+
+                div {
+                    padding: $p-3;
+                }
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
         }
     }
 
     .portfolio {
-        padding: $p-6;
 
         h2 {
             @include h2();
@@ -301,7 +413,6 @@ $black: #000000;
 
         #designcarousel {
             height: 400px;
-            width: 75%;
             margin: auto;
             overflow: hidden;
 
@@ -323,17 +434,43 @@ $black: #000000;
 
             }
         }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 80%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+        }
     }
 
     .contact {
-        padding: $p-6;
 
         h2 {
             @include h2();
         }
 
         .form {
-            width: 50%;
             display: grid;
             gap: $p-2;
             margin: auto;
@@ -349,6 +486,38 @@ $black: #000000;
                 width: 50%;
                 background-color: #a34054;
                 margin: auto;
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            .form {
+                width: 85%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            .form {
+                width: 75%;
+            }
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            .form {
+                width: 60%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            .form {
+                width: 50%;
             }
         }
     }
