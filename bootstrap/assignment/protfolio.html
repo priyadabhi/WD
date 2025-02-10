@@ -20,10 +20,10 @@
                 <div class="logo">
                     <img src="../images/logo.png" alt="">
                 </div>
-                <div onclick="changeicon('icon')" role="button" class="dicon">
+                <div onclick="changeicon('icon','menu')" role="button" class="dicon">
                     <i class="fa-solid fa-bars" id="icon"></i>
                 </div>
-                <div class="menu">
+                <div class="menu" id="menu">
                     <a href="#home">home</a>
                     <a href="#about">about me</a>
                     <a href="#skills">skills</a>
@@ -174,14 +174,46 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="mailid" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Email ID</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>priyadabhi43@gmail.com</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="mobileno" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Mobile no.</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>7096099091</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="fheader">
                 <h2>connect me</h2>
                 <div class="icon">
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-solid fa-paper-plane"></i></a>
-                    <a href=""><i class="fa-solid fa-phone-volume"></i></a>
+                    <a href="https://www.linkedin.com/in/priya-dabhi-a788a1301/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/priyadabhi/WD"><i class="fa-brands fa-github"></i></a>
+                    <a href="#mailid" data-bs-toggle="modal"><i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="#mobileno" data-bs-toggle="modal"><i class="fa-solid fa-phone-volume"></i></a>
                 </div>
                 <div class="fnav">
                     <a href="#home">home</a>
