@@ -1,0 +1,575 @@
+$p-1: 0.5rem;
+$p-2: 1rem;
+$p-3: 1.5rem;
+$p-4: 2rem;
+$p-5: 2.5rem;
+$p-7: 4rem;
+$p-6: 7rem;
+
+$m-1: 0.5rem;
+$m-2: 1rem;
+$m-3: 1.5rem;
+$m-4: 2rem;
+$m-5: 2.5rem;
+
+$f-1: 0.8rem;
+$f-2: 1rem;
+$f-3: 1.2rem;
+$f-4: 1.5rem;
+$f-5: 2rem;
+$f-6: 3rem;
+
+$peach: #E9BCB9;
+$yellow: #ED9E59;
+$brown: #a34054;
+$darkbrown: #4a2b34;
+$violet: #44174E;
+$lightviolet: #70326e;
+$black: #000000;
+
+@mixin input {
+    padding: $p-1;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 2px 2px $brown;
+    text-transform: uppercase;
+}
+
+@mixin h2 {
+    color: $yellow;
+    text-align: center;
+    text-transform: capitalize;
+    margin: $m-4;
+}
+
+@mixin responsivepadding {
+    padding-top: $p-6;
+    padding-left: $p-1;
+    padding-right: $p-1;
+    padding-bottom: $p-5;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    background-color: $darkbrown;
+    position: fixed;
+    width: 100%;
+
+    .nav {
+        justify-content: space-between;
+
+        .logo {
+            background-color: transparent;
+
+            img {
+                width: 50%;
+            }
+
+        }
+
+        .dicon {
+            border: 1px solid $peach;
+            font-size: $f-5;
+            padding: $p-2;
+            color: $peach;
+            box-shadow: 0px 0px 2px 3px $peach;
+
+
+            @media (max-width:576px) {
+                display: block;
+            }
+
+            @media (min-width:992px) {
+                display: none;
+            }
+
+        }
+
+        .menu {
+            display: flex;
+            text-transform: uppercase;
+
+            a {
+                text-decoration: none;
+                font-size: $f-2;
+                color: $peach;
+                padding-bottom: $p-1;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    transition: 0.5s ease-in-out;
+                    background-color: $peach;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+            }
+
+            @media (max-width:576px) {
+                display: none;
+            }
+
+            @media (min-width:576px) {
+                display: none;
+            }
+
+            @media (min-width:992px) {
+                width: 75%;
+                display: flex;
+                gap: $p-3;
+                text-transform: uppercase;
+                justify-content: end;
+                align-items: center;
+                margin-right: $m-3;
+            }
+
+
+        }
+    }
+}
+
+.main {
+    padding: $p-5;
+    background-color: $lightviolet;
+    height: 650px;
+    overflow: hidden;
+
+    .home {
+        display: flex;
+        gap: $p-3;
+
+        .image {
+            width: 40%;
+            text-align: end;
+
+            img {
+                width: 75%;
+                border-radius: 60%;
+                box-shadow: inset 0px 0px 10px 15px palevioletred;
+            }
+        }
+
+        .text {
+            text-transform: capitalize;
+            color: $peach;
+            font-size: $f-3;
+            align-content: center;
+
+            .name {
+                color: $yellow;
+            }
+
+            @media (max-width:576px) {
+                width: 100%;
+
+                .name {
+                    font-size: $f-5;
+                }
+            }
+
+            @media (min-width:576px) {
+                width: 100%;
+
+                .name {
+                    font-size: $f-5;
+                }
+            }
+
+            @media (min-width:768px) {
+                width: 70%;
+
+                .name {
+                    font-size: $f-4;
+                }
+            }
+
+            @media (min-width:992px) {
+                .name {
+                    font-size: $f-6;
+                }
+
+            }
+
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+        }
+
+        @media (min-width:768px) {
+            padding: $p-6;
+            flex-direction: row;
+            text-align: left;
+        }
+
+    }
+
+    .about {
+        text-transform: capitalize;
+        color: $yellow;
+
+        .img {
+            width: 100%;
+            text-align: center;
+
+            img {
+                filter: opacity(0.6);
+                border-radius: 70%;
+                box-shadow: inset 0px 0px 20px 15px $yellow;
+
+                @media (max-width:576px) {
+                    width: 25%;
+                }
+
+                @media (min-width:576px) {
+                    width: 25%;
+                }
+
+                @media (min-width:768px) {
+                    width: 25%;
+                }
+
+                @media (min-width:992px) {
+                    width: 10%;
+                }
+            }
+        }
+
+        .heading {
+            font-size: $f-5;
+            color: $yellow;
+            text-align: center;
+            margin: $m-3;
+        }
+
+        .aboutme {
+            color: $peach;
+            margin: auto;
+            text-align: center;
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 100%;
+                font-size: $f-2;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 100%;
+                font-size: $f-3;
+            }
+
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            .aboutme {
+                width: 75%;
+                // font-size: $f-3;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            .aboutme {
+                width: 75%;
+                // font-size: $f-3;
+            }
+        }
+    }
+
+    .skills {
+
+        h2 {
+            @include h2();
+        }
+
+        p {
+            text-transform: capitalize;
+            font-size: $f-3;
+            color: $peach;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            text-align: end;
+            margin: $m-1;
+
+            progress {
+                width: 100%;
+                border: 1px solid transparent;
+                box-shadow: 0px 0px 2px 3px $violet;
+                border-radius: 5px;
+                margin: $m-1;
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            p {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            p {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            p {
+                width: 70%;
+            }
+        }
+    }
+
+    .education {
+        padding: $p-6;
+
+        h2 {
+            @include h2();
+            margin-bottom: $m-5;
+        }
+
+        .study {
+            display: flex;
+            color: $peach;
+            text-transform: capitalize;
+            font-size: $f-3;
+            justify-content: center;
+            margin-bottom: $p-6;
+
+
+            div {
+                border: 1px solid $peach;
+                box-shadow: 0px 0px 5px 5px $brown;
+
+                li {
+                    list-style: none;
+                }
+            }
+
+            @media (max-width:576px) {
+                flex-direction: column;
+                gap: $p-2;
+
+                div {
+                    padding: $p-1;
+                }
+            }
+
+            @media (min-width:576px) {
+                flex-direction: column;
+                gap: $p-2;
+
+                div {
+                    padding: $p-1;
+                }
+            }
+
+            @media (min-width:768px) {
+                flex-direction: row;
+                gap: $p-5;
+
+                div {
+                    padding: $p-3;
+                }
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+        }
+    }
+
+    .portfolio {
+
+        h2 {
+            @include h2();
+        }
+
+        #designcarousel {
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+
+            img {
+                height: 400px;
+            }
+
+            h5 {
+                color: $darkbrown;
+                background-color: $yellow;
+                padding: $p-1;
+                text-transform: capitalize;
+            }
+
+            button {
+                span {
+                    background-color: $darkbrown;
+                }
+
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            #designcarousel {
+                width: 80%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+        }
+    }
+
+    .contact {
+
+        h2 {
+            @include h2();
+        }
+
+        .form {
+            display: grid;
+            gap: $p-2;
+            margin: auto;
+
+
+            input,
+            textarea {
+                @include input()
+            }
+
+            .send {
+                @include input();
+                width: 50%;
+                background-color: #a34054;
+                margin: auto;
+            }
+        }
+
+        @media (max-width:576px) {
+            @include responsivepadding();
+
+            .form {
+                width: 85%;
+            }
+        }
+
+        @media (min-width:576px) {
+            @include responsivepadding();
+
+            .form {
+                width: 75%;
+            }
+        }
+
+        @media (min-width:768px) {
+            @include responsivepadding();
+
+            .form {
+                width: 60%;
+            }
+        }
+
+        @media (min-width:992px) {
+            padding: $p-6;
+
+            .form {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #000000;
+    color: $peach;
+    font-size: $f-2;
+    text-align: center;
+
+    .fheader {
+        font-size: $f-3;
+        text-transform: capitalize;
+
+        h2 {
+            font-size: $f-6;
+            text-transform: uppercase;
+        }
+
+        .icon {
+            display: flex;
+            gap: $p-3;
+            justify-content: center;
+            margin: $m-5;
+
+            i {
+                padding: $p-2;
+                box-shadow: 0px 0px 10px 5px $peach;
+                color: $yellow;
+            }
+        }
+
+        .fnav {
+            display: flex;
+            gap: $p-4;
+            justify-content: center;
+            margin: $m-5;
+
+            a {
+                text-decoration: none;
+                color: $peach;
+            }
+
+            @media (max-width:576px) {
+                flex-direction: column;
+
+            }
+        }
+    }
+}
