@@ -22,7 +22,7 @@ $f-6: 3rem;
 $peach: #E9BCB9;
 $yellow: #ED9E59;
 $brown: #a34054;
-$darkbrown: #662249;
+$darkbrown: #4a2b34;
 $violet: #44174E;
 $lightviolet: #70326e;
 $black: #000000;
@@ -89,6 +89,7 @@ $black: #000000;
 
         .menu {
             display: flex;
+            text-transform: uppercase;
 
             a {
                 text-decoration: none;
@@ -111,6 +112,7 @@ $black: #000000;
                 &:hover::after {
                     width: 100%;
                 }
+
             }
 
             @media (max-width:576px) {

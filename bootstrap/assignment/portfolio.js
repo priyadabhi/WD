@@ -9,12 +9,13 @@ function changeicon(icon, menu) {
         i.classList.remove("fa-bar")
         i.classList.add("fa-xmark")
         m.style.display = "flex"
+        m.style.flexBasis = "100%"
         m.style.flexDirection = "column"
-        m.style.flexWrap = "nowrap"
+        m.style.textAlign = "center"
     } else {
         i.classList.remove("fa-xmark")
         i.classList.add("fa-bar")
         m.style.display = "none"
-        // menu.style.display = "none"
+        menu.style.display = "none"
     }
 }
