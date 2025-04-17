@@ -30,7 +30,7 @@
         span {
             color: white;
             font-size: 15px;
-            margin-left: 275px;
+            /* margin-right: 1rem; */
             cursor: pointer;
         }
 
@@ -39,14 +39,17 @@
             text-align: left;
             color: white;
             padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
         }
 
         li:nth-child(odd) {
-            background-color: rgba(102, 128, 0, 0.663);
+            background-color: rgba(155, 171, 88, 0.663);
+            color: black;
         }
 
         li:nth-child(even) {
-            background-color: rgba(0, 187, 255, 0.899);
+            background-color: rgba(54, 115, 138, 0.899);
         }
     </style>
 </head>
@@ -60,8 +63,6 @@
             <!-- <li><span></span></li> -->
         </div>
     </div>
-
-
     <script>
         function addlist() {
             let li = document.createElement("li")
@@ -81,13 +82,13 @@
             })
 
             document.getElementById("todo").value = ""
-        }
-
-        // function del() {
-        //     let delspan = document.getElementsByTagName(span)
-        //     delspan.remove()
-        // }
+        } 
     </script>
 </body>
+
+<!-- function del() {
+    let delspan = document.getElementsByTagName(span)
+    delspan.remove()
+} -->
 
 </html>
