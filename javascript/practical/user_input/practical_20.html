@@ -11,6 +11,7 @@
             border: 1px solid black;
             width: 30%;
             text-align: center;
+            background-color: #ccc;
         }
 
         .date {
@@ -33,7 +34,9 @@
         #dday,
         #dmonth,
         #dyear {
-            color: blue;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: rgb(21, 21, 87);
         }
     </style>
 </head>
@@ -42,7 +45,7 @@
     <div class="main">
         <div class="displaydate">
             <h2>
-                Display difference of day, month and year of given 2 dates.
+                Difference in Days, Months, and Years Between Two Dates.
             </h2>
             <hr>
             <div class="date">
@@ -51,9 +54,9 @@
                 <label for="edate">Enter End Date</label>
                 <input type="date" name="" id="edate">
                 <button id="btndisplay" onclick="displaydate()">Display</button>
-                <p>Day is:<label for="" id="dday"></label></p>
-                <p>Month is:<label for="" id="dmonth"></label></p>
-                <p>Year is:<label for="" id="dyear"></label></p>
+                <p>Day is: <label for="" id="dday"></label></p>
+                <p>Month is: <label for="" id="dmonth"></label></p>
+                <p>Year is: <label for="" id="dyear"></label></p>
             </div>
         </div>
     </div>

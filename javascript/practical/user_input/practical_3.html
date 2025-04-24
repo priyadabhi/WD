@@ -21,10 +21,6 @@
         }
 
         #changebg {
-            display: none;
-        }
-
-        button {
             position: absolute;
             padding: 2rem;
             background-color: lightseagreen;
@@ -37,18 +33,12 @@
 
 <body>
     <div class="change">
-        <button onclick="clickbtn()">change bg color</button>
         <input type="color" name="" id="changebg" onchange="clchange()">
-        <div id="divcolor">
-        </div>
+        <div id="divcolor"></div>
     </div>
 
     <script>
-        function clickbtn() {
-            document.getElementById("changebg").click()
-        }
         function clchange() {
-
             let changebg = document.getElementById("changebg").value
             let divcolor = document.getElementById("divcolor")
             divcolor.style.backgroundColor = changebg
