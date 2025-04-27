@@ -56,15 +56,15 @@
 
 <body>
     <div>
-        <h2>TODO List</h2>
+        <h2>To-Do List</h2>
         <input type="text" name="" id="todo">
         <button id="" onclick="addlist()">ADD LIST</button><br>
         <div id="list"></div>
     </div>
     <script>
         function addlist() {
-            let li = document.createElement("li")
             let input = document.getElementById("todo").value
+            let li = document.createElement("li")
             let text = document.createTextNode(input)
             li.append(text);
             let mylist = document.getElementById("list")

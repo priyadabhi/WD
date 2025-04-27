@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+        .container {
+            width: 100%;
+            /* Full width of the parent */
+        }
+
+        .child {
+            width: 400px;
+            /* Fixed width of the child element */
+            margin-left: calc((100% - 400px) / 2);
+            /* Centering the child element */
+            margin-right: calc((100% - 400px) / 2);
+            /* Equal margin on the right */
+            color: white;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child">
+            child div
+        </div>
+    </div>
+</body>
+
+</html>
